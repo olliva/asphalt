@@ -232,7 +232,7 @@ p,img{
 }
 .videoContainer{
     position: relative;
-    background: url(img/videoBg.jpg) -306px;
+    background: url(img/videoBg.jpg) center;
 height: 381px;
 }
 
