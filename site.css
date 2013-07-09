@@ -251,13 +251,14 @@ height: 381px;
 .videoContent{
     position: absolute;
     color: #FFF;
-    font-size: 42px;
+    font-size: 43px;
     line-height: 48px;
-    font-weight: bold;
     top: 45px;
-    width: 400px;
+    width: 784px;
     text-align: center;
-    left: 260px;
+    left: 63px;
+    letter-spacing: 1px;
+    font-weight: bold;
     }
 .playButton{
     margin-top: 30px;
