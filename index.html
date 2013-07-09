@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<meta name="viewport" content="width=device-width" />
+        <title>Style</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="stylesheet" type="text/css" href="site.css"></link>
+        <!--[if IE 7]>
+            <link rel="stylesheet" type="text/css" href="ie7.css"></link>
+        <![endif]-->
+        <script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+        <script type="text/javascript">
+        $(document).ready(function(){
+        	function scroll_to_elem(elem,speed) {
+				if(document.getElementById(elem)) {
+					var destination = jQuery('#'+elem).offset().top;
+					jQuery("html,body").animate({scrollTop: destination}, speed);
+				}
+			}
+			$(".lastItem").click(function(){
+				scroll_to_elem ("target",2000)
+			});
+			$('.firstRadio').checked = true; 
+        });
+        </script>
+    </head>
+    <body>
+    	<div class="noise"></div>
+    	<div class="page">
+    		<img src="img/fon.png" alt="" class="fon">
+	    	<div class="header">
+	    		<div class="pageContainer clearfix">
+	    			<div class="logo">
+	    				<a href=""><img src="img/logoBG.png" alt="" class="logoImage"></a>
+	    			</div>
+	    			<div class="menu">
+	    				<ul class="clearfix">
+	    					<li class="menuItem"><a href="">ДОКУМЕНТЫ</a></li>
+	    					<li class="menuItem"><a href="">ФОТОГАЛЕРЕЯ</a></li>
+	    					<li class="menuItem"><a href="">ВИДЕО</a></li>
+	    					<li class="menuItem"><a href="">ДИЛЕРАМ</a></li>
+	    					<li class="menuItem"><a href="">ОТЗЫВЫ</a></li>
+	    					<li class="menuItem lastItem"><span>ЗАКАЗАТЬ</span></li>
+	    				</ul>
+	    				<div class="ticket">
+	    					<div class="ticketContent">
+	    						<div class="telephone">Заказ по телефону (+7 495) 775-83-34</div>
+	    						<div class="email">Заказ по e-mail <a href="">info@asphalite.ru</a></div>
+	    					</div>
+	    					<div class="borderBottom">
+	    					</div>
+	    				</div>
+	    			</div>
+	    		</div>
+	    	</div>
+	    	<div class="content">
+	    		<div class="pageContainer">
+	    			<div class="textContent clearfix">
+	    				<div class="leftColumn">
+	    					<div class="bigHeader">
+	    						Готовая к применению холодная асфальто-бетонная смесь
+	    					</div>
+	    					<div class="italicContent">
+	    						Применяется для обустройства тротуаров, автомобильных дорог, парковых дорожек, парковочных площадок и придомовых территорий
+	    					</div>
+	    					<div class="mediumHeader">
+	    						Удобно использовать<br>на даче или рядом со своим коттеджем
+	    						<img src="img/leftColumnImg.png" alt=""/>
+	    					</div>
+	    				</div>
+	    				<div class="centerColumn">
+	    					<div class="mediumHeader">
+	    						Идеален для ремонта дороги своими руками
+	    						<img src="img/centerColumnImg.png" alt=""/>
+	    					</div>
+	    				</div>
+	    				<div class="rightColumn">
+	    					<div class="mediumHeader">
+	    						Недорогой и удобный способ заделать яму во дворе
+	    						<img src="img/rightColumnImg.png" alt="">
+	    					</div>
+	    				</div>
+	    				<div class="box">
+	    					<img src="img/box.png" alt="" class="bigBox">
+	    					<div class="ecology">
+	    						Чистый экологичный продукт
+	    					</div>
+	    				</div>
+	    			</div>
+	    		</div>
+	    		<div class="videoPart">
+	    			<div class="videoContainer">
+	    				<img src="img/videoImg.png" class="videoImg"alt="">
+	    				<div class="videoContent">
+	    					Видеоинструкция от &laquo;Асфалайта&raquo;
+	    					<img src="img/playButton.png" alt="" class="playButton"/>
+	    				</div>
+	    			</div>
+	    			<div class="ground"></div>
+	    		</div>
+	    		<div class="instrContainer">
+	    			<div class="instructionBG"></div>
+		    		<div class="instruction">
+		    			<div class="instrBorder"></div>
+		    			<a href="" class="instrImg"><img src="img/instruction.png" alt="" /></a>
+		    			<div class="instrText">Посмотреть пошаговую инструкцию по применению</div>
+		    		</div>
+				</div>
+	    	</div>
+	    	<div class="oder clearfix">
+	    		<div class="instrContainer">
+	    			<div class="instructionBG"></div>
+		    		<div class="instruction">
+		    			<div class="instrBorder"></div>
+		    			<a href="" class="instrImg"><img src="img/instruction.png" alt="" /></a>
+		    			<div class="instrText">Посмотреть пошаговую инструкцию по применению</div>
+		    		</div>
+				</div>
+	    		<div class="pageContainer" id="target">
+	    			<div class="oderHeader">Оформление заказа</div>
+    				<div class="leftOderColumn">
+    					<div class="smallHeader">Ваше имя<span class="red"><sup>*</sup></span></div>
+    					<input type="text"  class="oderInput"/>
+    					<div class="smallHeader">Телефон<span class="red"><sup>*</sup></span></div>
+    					<input type="text"  class="oderInput telephone"/>
+    					<div class="smallHeader">E-mail</div>
+    					<input type="text"  class="oderInput"/>
+    				</div>
+    				<div class="centerOderColumn">
+    					<div class="smallHeader">Упаковка</div>
+    					<div class="inpForm">
+	    					<input type="radio" name="choise" class="radioInput firstRadio" checked/>
+	                        <label class="radioLabel">1 тонна: без упаковки</label><label class="rightLabel">6 320 р</label>
+                        </div>
+                        <div class="inpForm">
+	                        <input type="radio" name="choise" class="radioInput"/>
+	                        <label class="radioLabel">1 тонна: в бигбэгах</label><label class="rightLabel">7 200 р</label>
+                        </div>
+                        <div class="inpForm">
+	                        <input type="radio" name="choise" class="radioInput"/>
+	                        <label class="radioLabel">25кг: в ведрах</label><label class="rightLabel">305 р</label>
+                        </div>
+                        <div class="smallItalicText">Цены указаны без учета стоимости доставки. Самовывоз возможен с завода в г. Рязани.</div>
+                        <div class="mediumHeader">Сумма</div>
+    				</div>
+    				<div class="rightOderColumn">
+    					<div class="smallHeader">Количество<span class="red"><sup>*</sup></span></div>
+    					<input type="text" class="oderInput telephone" /><span class="italic">ведер</span>
+    					<div class="smallHeader">E-mail</div>
+    					<textarea name="" id="" cols="30" rows="7" class="oderTextArea"></textarea>
+    					<div class="sendButton"><img src="img/sendButton.png" alt=""/></div>
+    				</div>
+	    			
+	    		</div>
+	    	</div>
+	    	<div class="footer clearfix">
+	    		<div class="footerBorder"></div>
+	    		<div class="pageContainer">
+	    			<div class="leftOderColumn">
+	    				<div class="mediumHeader">Заказ по телефону</div>
+	    				<div class="telNumber">+7 495 775-83-34</div>
+	    			</div>
+	    			<div class="centerOderColumn">
+	    				<div class="mediumHeader">Заказ по e-mail</div>
+	    				<div class="footerEmail">
+	    					<a href="">info@asphalite.ru</a>
+	    				</div>
+	    				<div class="mediumHeader">Мы в социальных сетях</div>
+	    			</div>
+	    			<div class="rightOderColumn">
+	    				<img src="img/pureProduct.png" alt="">
+	    				<div class="copyright">©2008 - 2012 Группа предприятий &laquo;РАД&raquo;</div>
+	    				<div class="creator">
+	    					Все права защищены<br>
+	    					Создание сайта - <a href="http://greensight.ru">Greensight</a>
+	    				</div>
+	    			</div>
+
+	    		</div>
+	    	</div>
+    	</div>
+    </body>
+</html>

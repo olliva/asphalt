@@ -1,0 +1,38 @@
+.ecology{
+	width: 170px;
+}
+.ticket{
+	width: 130px;
+	height: 108px;
+}
+.logoImage{
+	margin-top: 34px;
+}
+.menuItem{
+	*display: inline;
+	zoom: 1;
+}
+.oderInput{
+    width: 225px;
+    height: 10px;
+}
+.instruction{
+    width: 335px;
+    height: 63px;
+
+}
+.instrContainer{
+	margin-top: -65px;
+}
+.instructionBG{
+	height: 22px;
+}
+.oder .instrContainer{
+    display: none;
+}
+.content .instrContainer{
+    display: block;
+}
+.menuItem{
+	    padding: 10px 5px;
+}
