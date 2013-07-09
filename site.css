@@ -75,16 +75,16 @@ p,img{
  .menu ul{
     list-style-type: none;
     margin-top: 22px;
-    margin-right: 43px;
+    margin-right: 58px;
     letter-spacing: 2px;
  }
  .menuItem{
      display: inline-block;
-    margin: 0 12px;
+    margin: 0 14px;
      
  }
  .menuItem a{
-     font-size: 13px;
+     font-size: 12px;
      font-weight: bold;
      color: #19170f;
      border-bottom: 1px solid #cabe79;
@@ -98,10 +98,11 @@ p,img{
     padding: 10px 12px;
     border-radius:20px;
     cursor: pointer;
-    font-size: 13px;
+    font-size: 12px;
      font-weight: bold;
      color: #19170f;
      border-bottom: 1px solid #cabe79;
+     margin: 0;
 }
 .lastItem span{
     border-bottom: 1px dotted #947d3d;
@@ -256,7 +257,7 @@ height: 381px;
     top: 45px;
     width: 400px;
     text-align: center;
-    left: 300px;
+    left: 260px;
     }
 .playButton{
     margin-top: 30px;
@@ -372,6 +373,7 @@ margin-left: -100px;
     line-height: 20px;
     font-style: italic;
     color: #483d1e;
+    cursor: pointer;
 }
 .rightLabel{
     font-size: 14px;
