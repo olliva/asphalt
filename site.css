@@ -31,22 +31,12 @@ p,img{
     margin: 0;
     padding: 0;
 }
-body{
-    background-color: #f6d065;
-}
-.noise{
-    position: absolute;
-width: 100%;
-height: 100%;
-background: url(img/noise.png);
-opacity: 0.2;
-filter:progid:DXImageTransform.Microsoft.Alpha(opacity=20);
-display: none;
-}
+
+
 .page{
-    background-color: #f6d065;
     z-index: 2;
     min-width: 1350px;
+    background: url(img/bgImg.png);
 }
 .clearfix:after{
     clear: both;
@@ -69,7 +59,7 @@ display: none;
 .fon{
     position: absolute;
     z-index: 3;
-    left: 0;
+    left: -220px;
     top: 0;
 }
 .logo{
@@ -255,7 +245,7 @@ left: 280px;
     top: 45px;
     width: 400px;
     text-align: center;
-    left: 523px;
+    left: 300px;
     }
 .playButton{
     margin-top: 30px;
@@ -264,7 +254,6 @@ left: 280px;
     cursor: pointer;
 }
 .instrContainer{
-    width: 460px;
     position: relative;
     margin-top: -65px;
 }
@@ -277,7 +266,7 @@ left: 280px;
     position: absolute;
     background: #bfa14e;
     bottom: -4px;
-    right: -469px;
+    left:254px;
 }
 .instruction{
     width: 460px;
@@ -286,7 +275,7 @@ left: 280px;
     background: #f9eb97;
     margin-top: -65px;
     position: relative;
-    left: 464px;
+    left: 250px;
     z-index: 100;
     font-size: 18px;
     line-height: 24px;
@@ -294,7 +283,6 @@ left: 280px;
     color: black;
     padding-top: 15px;
     padding-right: 25px;
-    text-decoration: underline;
 }
 .instruction:hover{
     cursor: pointer;
@@ -308,7 +296,7 @@ left: 280px;
     display: block;
     position: absolute;
     left: 12px;
-    bottom: 12px;
+    bottom: -6px;
 }
 .instrBorder{
     background: url(img/instructionBorder.png) repeat-x;
@@ -319,6 +307,12 @@ margin-left: -100px;
 }
 .instrText{
     padding-top: 15px;
+}
+.instrText span{
+    border-bottom: 1px solid #c7bc79;
+}
+.instrText:hover span{
+    border-bottom-color: transparent;
 }
 .oderHeader{
     font-size: 36px;
@@ -430,7 +424,7 @@ margin-right: 70px;
     line-height: 63px;
 }
 .footer{
-    margin-bottom: 35px;
+    padding-bottom: 35px;
 }
 .footer .mediumHeader{
     margin-top: 0;
@@ -464,9 +458,28 @@ margin-right: 70px;
 .creator a:hover{
     text-decoration: none;
 }
-
-
-
+.socialNets{
+    margin-top: 5px;
+}
+.socialItem{
+    background: url(img/icons.png);
+    height: 36px;
+    display: block;
+    float: left;
+    margin-right: 16px;
+}
+.facebook{
+    background-position: -16px 0;
+    width: 20px;
+}
+.twitter{
+    background-position: -43px 0;
+    width: 40px;
+}
+.lj{
+    background-position: -95px 0;
+    width: 30px;
+}
 
 
 
