@@ -232,7 +232,7 @@ p,img{
 }
 .videoContainer{
     position: relative;
-    background: url(img/videoBg.jpg) center;
+    background: url(img/videoBg.jpg) -306px;
 height: 381px;
 }
 
@@ -251,14 +251,13 @@ height: 381px;
 .videoContent{
     position: absolute;
     color: #FFF;
-    font-size: 43px;
+    font-size: 41px;
     line-height: 48px;
     top: 45px;
     width: 784px;
     text-align: center;
-    left: 63px;
-    letter-spacing: 1px;
-    font-weight: bold;
+    left: 85px;
+    letter-spacing: 2px;
     }
 .playButton{
     margin-top: 30px;
