@@ -14,8 +14,8 @@
 }
 .oderInput{
     width: 225px;
-    height: 10px;
-    padding: 10px;
+    height: 23px;
+    padding-top: 7px;
 }
 .instruction{
     width: 335px;
@@ -42,4 +42,24 @@
 }
 .instrText{
 	margin-bottom: 5px;
+}
+.oderTextArea{
+	font-family: Tahoma;
+}
+/*Diller Page*/
+.notMainPage .logoImage{
+    margin-top: 34px;
+}
+
+.whiteInput{
+	padding-top: 7px;
+	height: 23px;
+	width: 225px;
+}
+.whiteTextarea{
+	font-family: Tahoma;
+	width: 279px;
+}
+input#telI{
+    width: 103px;
 }
