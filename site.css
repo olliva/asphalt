@@ -608,13 +608,18 @@ bottom: -3px;
     width: 240px;
     float: left;
     text-align: left;
+    position: relative;
 }
 .document{
     width: 215px;
     height: 161px;
     margin-bottom: 10px;
-    padding: 23px;
+    border: 1px solid #dcdadc;
     position: relative;
+    overflow: hidden;
+}
+.stDoc{
+    width: 215px;
 }
 .loop{
     position: absolute;
@@ -625,6 +630,8 @@ bottom: -3px;
     font-size: 14px;
     line-height: 18px;
     color: black;
+    display: block;
+    margin: 23px;
 }
 .document a span{
     border-bottom: 1px solid #aaaaaa;
@@ -640,7 +647,7 @@ bottom: -3px;
     cursor: pointer;
 }
 .unknownDoc{
-    background: url(img/uncnownDoc.jpg);
+    background: #f9f9f9;
 }
 
 .oneDocument{
@@ -705,5 +712,105 @@ bottom: -3px;
     margin-top: 66px;
     padding: 0 30px;
 }
+
+.documentBorderBottom{
+background: url(img/docBB.png);
+height: 7px;
+width: 215px;
+margin-top: -11px;
+position: absolute;
+top: 168px;
+}
+
+/*Comments page*/
+.commentsPage .underHederText{
+    width: 860px;
+}
+.commentsPage .appHeader{
+    margin-bottom: 10px;
+}
+.leftCommentFormColumn{
+    width: 300px;
+    float: left;
+}
+.rightCommentFormColumn{
+    width: 660px;
+    float: left;
+}
+textarea#comFormText{
+    height: 243px;
+}
+.commentsPage .whiteInput{
+    width: 263px;
+    margin-bottom: 12px;
+}
+.commentsPage .textLabel {
+    font-size: 14px;
+}
+input#comPhone{
+    width: 143px;
+}
+.commentsPage .sendButton{
+    text-align: right;
+}
+.commentsPage .sendButton img{
+    margin-top: 0;
+}
+.commentsPage .sendButImg{
+    vertical-align: middle;
+}
+.commentsPage .sendButton a{
+    font-size: 14px;
+    margin-right: 25px;
+    color: black;
+}
+.commentsPage .sendButton a span{
+    border-bottom: 1px solid #b8b8b8;
+}
+.commentsPage .sendButton a:hover span{
+    border-bottom-color: transparent;
+}
+.addFileClass{
+    vertical-align: middle;
+    margin-right: 8px;
+}
+.commentsPage .dilerinform{
+    padding-bottom: 40px;
+}
+.commentsPart .pageContainer{
+    margin-top: 84px;
+}
+
+.leftCommentPart{
+    width: 225px;
+    float: left;
+    text-align: right;
+}
+.rightCommentPart{
+    width: 663px;
+    float: right;
+}
+.commentDate{
+    font-size: 14px;
+    color: #7c7c7c;
+    font-style: italic;
+}
+.personName{
+    font-size: 14px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+.commentText{
+    
+}
+
+
+
+
+
+
+
+
+
 
 

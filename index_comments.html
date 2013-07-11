@@ -29,7 +29,7 @@
         </script>
     </head>
     <body>
-    	<div class="page dilers notMainPage">
+    	<div class="page commentsPage notMainPage">
     		<div class="pageContainer">
 	    		<img src="img/fon.png" alt="" class="fon">
 	    	</div>
@@ -62,44 +62,43 @@
 	    		<div class="pageContainer">
 	    			<div class="dilerinform">
 	    				<div class="dilerInformHeader">Отзывы</div>
-	    				<p>Нам очень важно знать мнение всех, кто пользовался нашим продуктом. Да и нашим будущим клиентам интересно взглянуть на то, что думают о нас наши заказчики.</p>
+	    				<p class="underHederText">Нам очень важно знать мнение всех, кто пользовался нашим продуктом. Да и нашим будущим клиентам интересно взглянуть на то, что думают о нас наши заказчики.</p>
 	    				<div class="appHeader">Оставить отзыв</div>
-	    				<div class="commentForm">
-		    				<div class="leftCommentFormColumn"></div>
-		    				<div class="rightCommentFormColumn"></div>
+	    				<div class="commentForm clearfix">
+		    				<div class="leftCommentFormColumn">
+		    					<label for="comFIO" class="textLabel">ФИО <span class="red"><sup>*</sup></span></label>
+    							<input type="text" name="" id="comFIO" class="whiteInput"/>
+    							<label for="e-mail" class="textLabel">Электронная почта <span class="red"><sup>*</sup></span></label>
+    							<input type="text" name="" id="e-mail" class="whiteInput"/>
+    							<label for="comPhone" class="textLabel">Контактный телефон <span class="red"><sup>*</sup></span></label>
+    							<input type="text" name="" id="comPhone" class="whiteInput"/>
+    							<label for="capchaInp" class="textLabel">Введите код с картинки <span class="red"><sup>*</sup></span></label>
+    							<input type="text" name="" id="capchaInp" class="whiteInput"/>
+    							<img src="img/capcha.jpg" alt="" class="capcha"/>
+		    				</div>
+		    				<div class="rightCommentFormColumn">
+		    					<label for="comFormText" class="textLabel">Текст отзыва <span class="red"><sup>*</sup></span></label>
+    							<textarea name="" id="comFormText" cols="30" rows="15" class="whiteTextarea"></textarea>
+    							<div class="sendButton clearfix">
+    								<a href="#"><img src="img/plus.gif" alt="" class="addFileClass"/><span>Добавить файл к отзыву</span></a>
+    								<img src="img/sendButton.png" alt="" class="sendButImg"/>
+    							</div>
+		    				</div>
 		    				</div>
 	    			</div>
     			</div>
-    			<div class="application">
+    			<div class="commentsPart">
     				<div class="whiteBorder"></div>
     				<div class="pageContainer">
-	    				<div class="appHeader">Оставить заявку</div>
-	    				<label for="region" class="textLabel">Регион</label>
-	    				<input type="text" class="whiteInput" id="region">
-    					<div class="orgHeader">Данные об организации</div>
-    					<div class="orgInf clearfix">
-    						<div class="leftOrgColumn">
-    							<label for="name" class="textLabel">Название</label>
-    							<input type="text" name="" id="name" class="whiteInput"/>
-    							<label for="FIO" class="textLabel">Ф. И. О.</label>
-    							<input type="text" name="" id="FIO" class="whiteInput"/>
-    							<label for="status" class="textLabel">Должность</label>
-    							<input type="text" name="" id="status" class="whiteInput"/>
-    						</div>
-    						<div class="centerOrgColumn">
-    							<label for="addres" class="textLabel">Адрес</label>
-    							<input type="text" name="" id="addres" class="whiteInput"/>
-    							<label for="telI" class="textLabel">Телефон/ факс</label>
-    							<input type="text" name="" id="telI" class="whiteInput"/>
-    							<label for="mail" class="textLabel">E-mail</label>
-    							<input type="text" name="" id="mail" class="whiteInput"/>
-    						</div>
-    						<div class="rightOrgColumn">
-    							<label for="orgText" class="textLabel">Текст</label>
-    							<textarea name="" id="orgText" cols="30" rows="15" class="whiteTextarea"></textarea>
-    							<div class="sendButton"><img src="img/sendButton.png" alt=""></div>
-    						</div>
-    					</div>
+	    				<div class="commentContainer clearfix">
+	    					<div class="leftCommentPart">
+	    						<p class="commentDate">29.02.2013</p>
+	    						<p class="personName">Захаренко Дмитрий Иванович</p>
+	    					</div>
+	    					<div class="rightCommentPart">
+	    						<p class="commentText">Никогда в жизни не буду отвечать на их предложения, т. к. работают грубо, по-хамски, не стыдятся лгать. Лицемеры, наглые паразиты. начинать работу с потенциальным клиентом со лжи, безжалостно играть на его больных местах - низко. Эти бизнесмены в черном списке.</p>
+	    					</div>
+	    				</div>
 	    			</div>
 		    	</div>
 		    	<div class="whiteYellowBorder"></div>
