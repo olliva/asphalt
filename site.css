@@ -614,9 +614,11 @@ bottom: -3px;
     width: 215px;
     height: 161px;
     margin-bottom: 10px;
-    border: 1px solid #dcdadc;
     position: relative;
     overflow: hidden;
+-webkit-box-shadow: 0px 0px #c6c6c6, 0px 0px 4px #c6c6c6;   
+-moz-box-shadow: 0px 0px #c6c6c6, 0px 0px 4px #c6c6c6;
+box-shadow: 0px 0px #c6c6c6, 0px 0px 4px #c6c6c6;
 }
 .stDoc{
     width: 215px;
@@ -714,12 +716,12 @@ bottom: -3px;
 }
 
 .documentBorderBottom{
-background: url(img/docBB.png);
-height: 7px;
+background: url(img/docBB2.png) 4px;
+height: 6px;
 width: 215px;
 margin-top: -11px;
 position: absolute;
-top: 168px;
+top: 169px;
 }
 
 /*Comments page*/
