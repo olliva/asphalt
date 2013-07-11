@@ -35,7 +35,7 @@ p,img{
 
 .page{
     z-index: 2;
-    min-width: 1000px;
+    min-width: 1040px;
     background: url(img/bgImg.png);
 }
 .clearfix:after{
@@ -56,7 +56,7 @@ p,img{
     z-index: 5;
     margin-bottom: 57px;
 }
-.dilers .header{
+.notMainPage .header{
     margin: 0;
 }
 .fon{
@@ -110,6 +110,9 @@ p,img{
 .lastItem span{
     border-bottom: 1px dotted #947d3d;
     padding-bottom: 2px;
+}
+.lastItem span:hover{
+    border-color:transparent;
 }
 
 
@@ -513,8 +516,8 @@ line-height: 35px;
     border: 1px solid #e3e3e3;
 }
 .dilerinform{
-    padding-top: 120px;
-    padding-bottom: 56px;
+    padding-top: 112px;
+    padding-bottom: 50px;
 }
 .dilerInformHeader{
     font-size: 48px;
@@ -597,9 +600,110 @@ bottom: -3px;
 }
 
 
+/*Documents page*/
+.documentsContainer{
+    margin-bottom: 22px;
+}
+.oneDocument{
+    width: 240px;
+    float: left;
+    text-align: left;
+}
+.document{
+    width: 215px;
+    height: 161px;
+    margin-bottom: 10px;
+    padding: 23px;
+    position: relative;
+}
+.loop{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+.document a{
+    font-size: 14px;
+    line-height: 18px;
+    color: black;
+}
+.document a span{
+    border-bottom: 1px solid #aaaaaa;
+}
+.document a:hover span{
+    border-bottom-color:transparent;
+}
 
+.doc1{
+    background: url(img/doc1.jpg);
+}
+.realDoc{
+    cursor: pointer;
+}
+.unknownDoc{
+    background: url(img/uncnownDoc.jpg);
+}
 
+.oneDocument{
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 40px;
+}
+.algorithm{
+    position: relative;
+}
+.algorithm .appHeader{
+    margin-bottom: 40px;
+}
+.algorithmLine{
+    margin-bottom: 63px;
+}
 
+.algorithmStep{
+    width: 327px;
+    float: left;
+}
+.algStepNumber{
+    margin-left: -10px;
+}
+.algStepHeader{
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 24px;
+    color: #191919;
+    margin-top: 5px;
+    width: 270px;
+}
+.algStepContent{
+    font-size: 14px;
+    line-height: 21px;
+    color: #191919;
+    width: 290px;
+}
 
+.docP .dilerInformHeader{
+    margin-bottom: 10px;
+}
+.rightAlgInstr{
+    background: url(img/rightAlgInstr.png);
+    position: absolute;
+    width: 302px;
+    height: 394px;
+    right: -34px;
+    top: -94px;
+    padding-top: 41px;
+    padding-right: 53px;
+    padding-left: 12px;
+    font-size: 13px;
+    text-align: center;
+    line-height: 16px;
+    font-style: italic;
+}
+.secondLine{
+    margin-top: 66px;
+}
+.thirdLine{
+    margin-top: 66px;
+    padding: 0 30px;
+}
 
 

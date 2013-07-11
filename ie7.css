@@ -63,3 +63,24 @@
 input#telI{
     width: 103px;
 }
+
+/*Documents page*/
+.rightAlgInstr{
+	width: 237px;
+	height: 353px;
+}
+
+.document{
+	width: 169px;
+	height: 115px;
+}
+.documentsLine{
+	position: relative;
+	zoom: 1;
+}
+.dilerinform{
+	margin-bottom: 50px;
+}
+.rightAlgInstr{
+	top: -45px;
+}
