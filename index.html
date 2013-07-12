@@ -27,9 +27,29 @@
 			$('.firstRadio').checked = true; 
         });
         </script>
+        <script src="js/magnific-popup.min.js"></script> 
+		<!-- Magnific Popup core CSS file -->
+		<link rel="stylesheet" href="magnific-popup.css"> 
+		<script type="text/javascript">
+		$(document).ready(function() {
+			  $('.popup-doc1').magnificPopup({
+				  type:'inline',
+				  midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+				});
+			  $('.popup-doc2').magnificPopup({
+				  type:'inline',
+				  midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+				});
+			  $('.hideForm').click(function(){
+			  		$('.commentForm').slideToggle("slow");
+			  		$('.hide1').toggle();
+			  		$('.hide2').toggle()
+			  });
+			  });
+		</script>
     </head>
     <body>
-    	<div class="page docP notMainPage">
+    	<div class="page commentsPage notMainPage">
     		<div class="pageContainer">
 	    		<img src="img/fon.png" alt="" class="fon">
 	    	</div>
@@ -50,7 +70,7 @@
 	    				<div class="ticket">
 	    					<div class="ticketContent">
 	    						<div class="telephone">Заказ по телефону <span class="notitalic">(+7 495) 775-83-34</span></div>
-	    						<div class="email">Заказ по e-mail <a href="#">info@asphalite.ru</a></div>
+	    						<div class="email">Заказ по e-mail <a href="">info@asphalite.ru</a></div>
 	    					</div>
 	    					<div class="borderBottom">
 	    					</div>
@@ -61,102 +81,88 @@
 	    	<div class="content">
 	    		<div class="pageContainer">
 	    			<div class="dilerinform">
-	    				<div class="dilerInformHeader">Документы</div>
-	    				<div class="documentsContainer">
-	    					<div class="documentsLine clearfix">
-	    						<div class="oneDocument">
-	    							<div class="document realDoc">
-	    								<img src="img/doc1.jpg" alt="" class="stDoc">
-	    								<img src="img/loop.png" alt="" class="loop"/>
-	    							</div>
-	    							<div class="documentBorderBottom"></div>
-	    							Сертификат соответствия
-	    						</div>
-	    						<div class="oneDocument">
-	    							<div class="document realDoc">
-	    								<img src="img/doc2.jpg" alt="" class="stDoc">
-	    								<img src="img/loop.png" alt="" class="loop"/>
-	    							</div>
-	    							<div class="documentBorderBottom"></div>
-	    							Сертификат соответствия
-	    						</div>
-	    						<div class="oneDocument">
-	    							<div class="document unknownDoc">
-	    								<a href=""><span>Протокол сертификационных испытаний, 25 Мб, pdf</span></a>
-	    							</div>
-	    							<div class="documentBorderBottom"></div>
-	    						</div>
-	    						<div class="oneDocument">
-	    							<div class="document unknownDoc">
-	    								<a href=""><span>Акт инспекционного контроля</span></a>
-	    							</div>
-	    							<div class="documentBorderBottom"></div>
-	    						</div>
-	    					</div>
-	    					<div class="documentsLine clearfix">
-	    						<div class="oneDocument">
-	    							<div class="document unknownDoc">
-	    								<a href=""><span>Протокол сертификационных испытаний, 25 Мб, pdf</span></a>
-	    							</div>
-	    							<div class="documentBorderBottom"></div>
-	    						</div>
-	    						<div class="oneDocument">
-	    							<div class="document unknownDoc">
-	    								<a href=""><span>Акт инспекционного контроля</span></a>
-	    							</div>
-	    							<div class="documentBorderBottom"></div>
-	    						</div>
-	    						<div class="oneDocument">
-	    							<div class="document unknownDoc">
-	    								<a href="#"><span>Информационная справка, 5 Мб, doc</span></a>
-	    							</div>
-	    							<div class="documentBorderBottom"></div>
-	    						</div>
-	    						<div class="oneDocument">
-	    							<div class="document unknownDoc">
-	    								<a href=""><span>Акт инспекционного контроля</span></a>
-	    							</div>
-	    							<div class="documentBorderBottom"></div>
-	    						</div>
-	    					</div>
-    					</div>
-    				</div>
+	    				<div class="dilerInformHeader">Отзывы</div>
+	    				<p class="underHederText">Нам очень важно знать мнение всех, кто пользовался нашим продуктом. Да и нашим будущим клиентам интересно взглянуть на то, что думают о нас наши заказчики.</p>
+	    				<div class="commentForm clearfix">
+	    					<div class="appHeader">Оставить отзыв</div>
+		    				<div class="leftCommentFormColumn">
+		    					<label for="comFIO" class="textLabel">ФИО <span class="red"><sup>*</sup></span></label>
+    							<input type="text" name="" id="comFIO" class="whiteInput"/>
+    							<label for="e-mail" class="textLabel">Электронная почта <span class="red"><sup>*</sup></span></label>
+    							<input type="text" name="" id="e-mail" class="whiteInput"/>
+    							<label for="comPhone" class="textLabel">Контактный телефон <span class="red"><sup>*</sup></span></label>
+    							<input type="text" name="" id="comPhone" class="whiteInput"/>
+    							<label for="capchaInp" class="textLabel">Введите код с картинки <span class="red"><sup>*</sup></span></label>
+    							<input type="text" name="" id="capchaInp" class="whiteInput"/>
+    							<img src="img/capcha.jpg" alt="" class="capcha"/>
+		    				</div>
+		    				<div class="rightCommentFormColumn">
+		    					<label for="comFormText" class="textLabel">Текст отзыва <span class="red"><sup>*</sup></span></label>
+    							<textarea name="" id="comFormText" cols="30" rows="15" class="whiteTextarea"></textarea>
+    							<div class="sendButton clearfix">
+    								<a href="#"><img src="img/plus.gif" alt="" class="addFileClass"/><span>Добавить файл к отзыву</span></a>
+    								<img src="img/sendButton.png" alt="" class="sendButImg"/>
+    							</div>
+		    				</div>
+		    				</div>
+	    			</div>
     			</div>
-    			<div class="algorithm">
+    			<div class="commentsPart">
     				<div class="whiteBorder"></div>
-
     				<div class="pageContainer">
-    					<div class="rightAlgInstr">
-    						<p>Асфалайт используется для аварийного ямочного ремонта асфальтобетонных покрытий</p>
-    						<p class="secondLine">круглый год<br>от -15 <sup>o</sup>C до + 40 <sup>o</sup>C</p>
-    						<p class="thirdLine">и готов к эксплуатации сразу после ремонта</p>
+    					<div class="hideForm hide1">
+    							<span>СВЕРНУТЬ ФОРМУ</span>
     					</div>
-	    				<div class="appHeader">Самая простая инструкция в мире</div>
-	    				<div class="algorithmLine clearfix">
-	    					<div class="algorithmStep">
-	    						<img src="img/step1.gif" alt="" class="algStepNumber"/>
-	    						<p class="algStepHeader">Очистить яму от грязи, остатков старого покрытия, воды и снега.</p>
-	    						<p class="algStepContent">Например: метлой.</p>
+    					<div class="hideForm hide2">
+    							<span>ОТКРЫТЬ ФОРМУ</span>
+    					</div>
+    					<div class="hideForm hideShadow"></div>
+	    				<div class="commentContainer clearfix">
+	    					<div class="leftCommentPart">
+	    						<p class="commentDate">29.02.2013</p>
+	    						<p class="personName">Захаренко Дмитрий Иванович</p>
 	    					</div>
-	    					<div class="algorithmStep">
-	    						<img src="img/step2.gif" alt="" class="algStepNumber"/>
-	    						<p class="algStepHeader">Заполнить яму Асфалайтом<br>и уплотнить лопатой, ручной трамбовкой, либо наезжая колесом автомобиля.</p>
-	    						<p class="algStepContent">Если яма глубокая рекомендуется наносить и уплотнять Асфалайт слоями 2,5 - 5 см.</p>
-	    					</div>
-	    				</div>
-	    				<div class="algorithmLine clearfix">
-	    					<div class="algorithmStep">
-	    						<img src="img/step3.gif" alt="" class="algStepNumber"/>
-	    						<p class="algStepHeader">Оставить выступ 1 см<br>над поверхностью отремонтированной ямы</p>
-	    						<p class="algStepContent">Для дальнейшего уплотнения транспортным потоком.</p>
-	    					</div>
-	    					<div class="algorithmStep">
-	    						<img src="img/step4.gif" alt="" class="algStepNumber"/>
-	    						<p class="algStepHeader">Открыть движение</p>
-	    						<img src="img/step4Img.jpg" alt="" class="fourthStepImg">
+	    					<div class="rightCommentPart">
+    							<br>
+    							<div class="imgCont">
+    								<a href="#doc1-popup" class="popup-doc1"><img src="img/doc1.jpg" alt="" class="doc_img doc1_img"/></a>
+    								<img src="img/loop.png" alt="" class="comm_loop"/>
+    							</div>
+    							<div id="doc1-popup" class="white-popup mfp-hide">
+									  <img src="img/doc1.jpg">
+									</div>
+    							<p class="commentText">
+	    							Никогда в жизни не буду отвечать на их предложения, т. к. работают грубо, по-хамски, не стыдятся лгать. Лицемеры, наглые паразиты. начинать работу с потенциальным клиентом со лжи, безжалостно играть на его больных местах - низко. Эти бизнесмены в черном списке.
+	    						</p>
 	    					</div>
 	    				</div>
-	    				
+	    				<div class="commentContainer clearfix">
+	    					<div class="leftCommentPart">
+	    						<p class="commentDate">25.02.2013</p>
+	    						<p class="personName">Андропов Алексей Аполонович</p>
+	    					</div>
+	    					<div class="rightCommentPart">
+	    						<p class="commentText">
+	    							<br>
+	    							Не могу не написать положительный отзыв о компании "ДРИАДА",с которой мне пришлось тесно сотрудничать, а конкретней: "ДРИАДА" произвела замер и замену деревянных окон на пластиковые окна и поменяла двери во всем доме включая межкомнатные двери и входную. Телефон (812)642-36-28 звоните. СПАСИБО!
+	    						</p>
+	    					</div>
+	    				</div>
+	    				<div class="commentContainer clearfix">
+	    					<div class="leftCommentPart">
+	    						<p class="commentDate">29.02.2013</p>
+	    						<p class="personName">Захаренко Дмитрий Иванович</p>
+	    					</div>
+	    					<div class="rightCommentPart">
+	    						<p class="commentText">
+	    							<br>
+	    							Нда, вот недостаток черных сайтов: можно о хорошем человеке написать, что угодно и без доказательств. "Бумага" она все стерпит, ага. С руководителем службы правового консалтинга я работаю не один год. И за все это время она ни разу не отказала в какой-либо помощи или совете. Не знаю какие вы там имеете в виду интриги и "шутки" (кнопки, что ли на стул подкладывали?), но я считаю, что она одна из наиболее позитивных и доброжелательных людей в нашей компании.
+	    						</p>
+	    					</div>
+	    				</div>
+	    				<div class="viewmore">
+	    					<span>СМОТРЕТЬ ЕЩЕ</span>
+	    				</div>
 	    			</div>
 		    	</div>
 		    	<div class="whiteYellowBorder"></div>
