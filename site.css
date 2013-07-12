@@ -888,14 +888,14 @@ input#comPhone{
     font-weight: bold;
     line-height: 20px;
     color: #666666;
-    width: 120px;
+    width: 170px;
     margin: 0 auto;
-    text-align: right;
-    background: url(img/greyBottomArrow.gif) no-repeat 1px 4px;
-
+    background: url(img/greyBottomArrow.gif) no-repeat 14px 4px;
+    text-align: center;
 }
 .viewmore span{
     border-bottom: 1px dotted #b2b2b2;
+    margin-left: 20px;
 }
 
 
