@@ -35,7 +35,7 @@ p,img{
 
 .page{
     z-index: 2;
-    min-width: 1040px;
+    min-width: 1060px;
     background: url(img/bgImg.png);
 }
 .clearfix:after{
@@ -807,6 +807,7 @@ input#comPhone{
 .rightCommentPart{
     width: 663px;
     float: right;
+    margin-top: 20px;
 }
 .commentDate{
     font-size: 14px;
@@ -888,15 +889,109 @@ input#comPhone{
     font-weight: bold;
     line-height: 20px;
     color: #666666;
-    width: 145px;
+    width: 120px;
     margin: 0 auto;
-    background: url(img/greyBottomArrow.gif) no-repeat 14px 4px;
-    text-align: center;
+    text-align: right;
+    background: url(img/greyBottomArrow.gif) no-repeat 1px 4px;
+
 }
 .viewmore span{
     border-bottom: 1px dotted #b2b2b2;
-    margin-left: 20px;
 }
+
+/*photogalery*/
+
+.photoGaleries{
+    list-style-type: none;
+    padding-bottom: 20px;
+}
+.photoGaleries li{
+    float: left;
+    padding-left: 20px;  
+    background: url(img/notActivePhotoLib.gif) no-repeat left 6px;
+}
+.photoGaleries li:first-child{
+    width: 340px;
+}
+.photoGaleries li:first-child + *{
+    width: 355px;
+}
+.photoGaleries li.activePhotoLibrary{
+    background: url(img/activePhotoLib.gif) no-repeat left 6px;
+}
+.photoGaleries li a{
+    font-size: 17px;
+    color: #7f7f7f;
+    line-height: 21px;
+    border-bottom: 1px solid #cccccc;
+}
+.photoGaleries li a:hover{
+    border-bottom-color: transparent;
+}
+.photoGaleries li.activePhotoLibrary a{
+    color: #000000;
+    border-bottom-color: transparent;
+}
+.photoNumber{
+    display: block;
+    font-style: italic;
+    font-size: 13px;
+}
+.photoLibrarylName{
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 30px;
+    margin-bottom: 30px;
+}
+.previewDescription{
+    color: black;
+    position: relative;
+    z-index: 2000;
+    line-height: 18px;
+    font-size: 14px;
+    margin-top: 17px;
+}
+a:hover{
+    text-decoration: none;
+}
+.caption{
+    
+}
+.photoDescr{
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

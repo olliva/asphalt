@@ -27,29 +27,75 @@
 			$('.firstRadio').checked = true; 
         });
         </script>
-        <script src="js/magnific-popup.min.js"></script> 
-		<!-- Magnific Popup core CSS file -->
-		<link rel="stylesheet" href="magnific-popup.css"> 
+
+
+		<link rel="stylesheet" href="galleriffic-2.css" type="text/css" />
+		<script type="text/javascript" src="js/jquery-1.3.2.js"></script>
+		<script type="text/javascript" src="js/jquery.galleriffic.js"></script>
+		<script type="text/javascript" src="js/jquery.opacityrollover.js"></script>
+
+
+	
 		<script type="text/javascript">
-		$(document).ready(function() {
-			  $('.popup-doc1').magnificPopup({
-				  type:'inline',
-				  midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+			jQuery(document).ready(function($) {
+				// We only want these styles applied when javascript is enabled
+				$('div.navigation').css({'width' : '300px', 'float' : 'left'});
+				$('div.content').css('display', 'block');
+
+				// Initially set opacity on thumbs and add
+				// additional styling for hover effect on thumbs
+				var onMouseOutOpacity = 0.67;
+				$('#thumbs ul.thumbs li').opacityrollover({
+					mouseOutOpacity:   onMouseOutOpacity,
+					mouseOverOpacity:  1.0,
+					fadeSpeed:         'fast',
+					exemptionSelector: '.selected'
 				});
-			  $('.popup-doc2').magnificPopup({
-				  type:'inline',
-				  midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+				
+				// Initialize Advanced Galleriffic Gallery
+				var gallery = $('#thumbs').galleriffic({
+					delay:                     2500,
+					numThumbs:                 4,
+					preloadAhead:              10,
+					enableTopPager:            true,
+					enableBottomPager:         true,
+					maxPagesToShow:            7,
+					imageContainerSel:         '#slideshow',
+					controlsContainerSel:      '#controls',
+					captionContainerSel:       '#caption',
+					renderSSControls:          true,
+					renderNavControls:         true,
+					playLinkText:              'Play Slideshow',
+					pauseLinkText:             'Pause Slideshow',
+					prevLinkText:              '',
+					nextLinkText:              '',
+					nextPageLinkText:          '',
+					prevPageLinkText:          '',
+					enableHistory:             false,
+					autoStart:                 false,
+					syncTransitions:           true,
+					defaultTransitionDuration: 900,
+					onSlideChange:             function(prevIndex, nextIndex) {
+						// 'this' refers to the gallery, which is an extension of $('#thumbs')
+						this.find('ul.thumbs').children()
+							.eq(prevIndex).fadeTo('fast', onMouseOutOpacity).end()
+							.eq(nextIndex).fadeTo('fast', 1.0);
+					},
+					onPageTransitionOut:       function(callback) {
+						this.fadeTo('fast', 0.0, callback);
+					},
+					onPageTransitionIn:        function() {
+						this.fadeTo('fast', 1.0);
+					}
 				});
-			  $('.hideForm').click(function(){
-			  		$('.commentForm').slideToggle("slow");
-			  		$('.hide1').toggle();
-			  		$('.hide2').toggle()
-			  });
-			  });
+			});
+		</script>
+		<script type="text/javascript">
+			document.write('<style>.noscript { display: none; }</style>');
 		</script>
     </head>
     <body>
-    	<div class="page commentsPage notMainPage">
+    	<div class="page photoPage notMainPage">
     		<div class="pageContainer">
 	    		<img src="img/fon.png" alt="" class="fon">
 	    	</div>
@@ -81,88 +127,175 @@
 	    	<div class="content">
 	    		<div class="pageContainer">
 	    			<div class="dilerinform">
-	    				<div class="dilerInformHeader">Отзывы</div>
-	    				<p class="underHederText">Нам очень важно знать мнение всех, кто пользовался нашим продуктом. Да и нашим будущим клиентам интересно взглянуть на то, что думают о нас наши заказчики.</p>
-	    				<div class="commentForm clearfix">
-	    					<div class="appHeader">Оставить отзыв</div>
-		    				<div class="leftCommentFormColumn">
-		    					<label for="comFIO" class="textLabel">ФИО <span class="red"><sup>*</sup></span></label>
-    							<input type="text" name="" id="comFIO" class="whiteInput"/>
-    							<label for="e-mail" class="textLabel">Электронная почта <span class="red"><sup>*</sup></span></label>
-    							<input type="text" name="" id="e-mail" class="whiteInput"/>
-    							<label for="comPhone" class="textLabel">Контактный телефон <span class="red"><sup>*</sup></span></label>
-    							<input type="text" name="" id="comPhone" class="whiteInput"/>
-    							<label for="capchaInp" class="textLabel">Введите код с картинки <span class="red"><sup>*</sup></span></label>
-    							<input type="text" name="" id="capchaInp" class="whiteInput"/>
-    							<img src="img/capcha.jpg" alt="" class="capcha"/>
-		    				</div>
-		    				<div class="rightCommentFormColumn">
-		    					<label for="comFormText" class="textLabel">Текст отзыва <span class="red"><sup>*</sup></span></label>
-    							<textarea name="" id="comFormText" cols="30" rows="15" class="whiteTextarea"></textarea>
-    							<div class="sendButton clearfix">
-    								<a href="#"><img src="img/plus.gif" alt="" class="addFileClass"/><span>Добавить файл к отзыву</span></a>
-    								<img src="img/sendButton.png" alt="" class="sendButImg"/>
-    							</div>
-		    				</div>
-		    				</div>
+	    				<div class="dilerInformHeader">Фотогалерея</div>
+	    				<ul class="photoGaleries clearfix">
+	    					<li class="activePhotoLibrary"><a href="#">Фотографии с объектов <span class="photoNumber">(10 фото)</span></a></li>
+	    					<li><a href="#">Производство Асфалайта <span class="photoNumber">(20 фото)</span></a></li>
+	    					<li><a href="#">Инструкция в фото <span class="photoNumber">(5 фото)</span></a></li>
+	    				</ul>
 	    			</div>
     			</div>
     			<div class="commentsPart">
     				<div class="whiteBorder"></div>
     				<div class="pageContainer">
-    					<div class="hideForm hide1">
-    							<span>СВЕРНУТЬ ФОРМУ</span>
-    					</div>
-    					<div class="hideForm hide2">
-    							<span>ОТКРЫТЬ ФОРМУ</span>
-    					</div>
-    					<div class="hideForm hideShadow"></div>
-	    				<div class="commentContainer clearfix">
-	    					<div class="leftCommentPart">
-	    						<p class="commentDate">29.02.2013</p>
-	    						<p class="personName">Захаренко Дмитрий Иванович</p>
-	    					</div>
-	    					<div class="rightCommentPart">
-    							<br>
-    							<div class="imgCont">
-    								<a href="#doc1-popup" class="popup-doc1"><img src="img/doc1.jpg" alt="" class="doc_img doc1_img"/></a>
-    								<img src="img/loop.png" alt="" class="comm_loop"/>
-    							</div>
-    							<div id="doc1-popup" class="white-popup mfp-hide">
-									  <img src="img/doc1.jpg">
+    					<div class="photoLibrarylName">Фотографии с обьектов</div>
+							<div id="thumbs" class="navigation">
+							<ul class="thumbs clearfix noscript">
+								<li>
+									<a class="thumb" name="leaf" href="img/slide1.jpg">
+										<img src="img/slide1_preview.jpg"/>
+										<p class="previewDescription"><span>Сертификат соответствия</span></p>
+									</a>
+									<div class="caption">
+										<p class="previewDescription">Сертификат соответствия</p>
 									</div>
-    							<p class="commentText">
-	    							Никогда в жизни не буду отвечать на их предложения, т. к. работают грубо, по-хамски, не стыдятся лгать. Лицемеры, наглые паразиты. начинать работу с потенциальным клиентом со лжи, безжалостно играть на его больных местах - низко. Эти бизнесмены в черном списке.
-	    						</p>
-	    					</div>
-	    				</div>
-	    				<div class="commentContainer clearfix">
-	    					<div class="leftCommentPart">
-	    						<p class="commentDate">25.02.2013</p>
-	    						<p class="personName">Андропов Алексей Аполонович</p>
-	    					</div>
-	    					<div class="rightCommentPart">
-	    						<p class="commentText">
-	    							<br>
-	    							Не могу не написать положительный отзыв о компании "ДРИАДА",с которой мне пришлось тесно сотрудничать, а конкретней: "ДРИАДА" произвела замер и замену деревянных окон на пластиковые окна и поменяла двери во всем доме включая межкомнатные двери и входную. Телефон (812)642-36-28 звоните. СПАСИБО!
-	    						</p>
-	    					</div>
-	    				</div>
-	    				<div class="commentContainer clearfix">
-	    					<div class="leftCommentPart">
-	    						<p class="commentDate">29.02.2013</p>
-	    						<p class="personName">Захаренко Дмитрий Иванович</p>
-	    					</div>
-	    					<div class="rightCommentPart">
-	    						<p class="commentText">
-	    							<br>
-	    							Нда, вот недостаток черных сайтов: можно о хорошем человеке написать, что угодно и без доказательств. "Бумага" она все стерпит, ага. С руководителем службы правового консалтинга я работаю не один год. И за все это время она ни разу не отказала в какой-либо помощи или совете. Не знаю какие вы там имеете в виду интриги и "шутки" (кнопки, что ли на стул подкладывали?), но я считаю, что она одна из наиболее позитивных и доброжелательных людей в нашей компании.
-	    						</p>
-	    					</div>
-	    				</div>
-	    				<div class="viewmore">
-	    					<span>СМОТРЕТЬ ЕЩЕ</span>
-	    				</div>
+								</li>
+								<li>
+									<a class="thumb" name="drop" href="img/slide2.jpg">
+										<img src="img/slide2.jpg"/>
+										<p class="previewDescription"><span>Завод по производству &laquo;Асфалайта&raquo;: загрузка сырья</span></p>
+									</a>
+									<div class="caption">
+										<p class="previewDescription">Завод по производству &laquo;Асфалайта&raquo;: загрузка сырья</p>
+									</div>
+								</li>
+								<li>
+									<a class="thumb" name="bigleaf" href="img/slide3.jpg">
+										<img src="img/slide3.jpg"/>
+										<p class="previewDescription"><span>Результат работы</span></p>
+									</a>
+									<div class="caption">
+										<p class="previewDescription">Результат работы</p>
+									</div>
+								</li>
+								<li>
+									<a class="thumb" name="lizard" href="img/slide4.jpg">
+										<img src="img/slide4.jpg"/>
+										<p class="previewDescription"><span>Переполненный склад</span></p>
+									</a>
+									<div class="caption">
+										<p class="previewDescription">Переполненный склад</p>
+									</div>
+								</li>
+								<li>
+									<a class="thumb" name="leaf" href="img/slide1.jpg">
+										<img src="img/slide1_preview.jpg"/>
+										<p class="previewDescription"><span>Сертификат соответствия</span></p>
+									</a>
+									<div class="caption">
+										<p class="previewDescription">Сертификат соответствия</p>
+									</div>
+								</li>
+								<li>
+									<a class="thumb" name="drop" href="img/slide2.jpg">
+										<img src="img/slide2.jpg"/>
+										<p class="previewDescription"><span>Завод по производству &laquo;Асфалайта&raquo;: загрузка сырья</span></p>
+									</a>
+									<div class="caption">
+										<p class="previewDescription">Завод по производству &laquo;Асфалайта&raquo;: загрузка сырья</p>
+									</div>
+								</li>
+								<li>
+									<a class="thumb" name="bigleaf" href="img/slide3.jpg">
+										<img src="img/slide3.jpg"/>
+										<p class="previewDescription"><span>Результат работы</span></p>
+									</a>
+									<div class="caption">
+										<p class="previewDescription">Результат работы</p>
+									</div>
+								</li>
+								<li>
+									<a class="thumb" name="lizard" href="img/slide4.jpg">
+										<img src="img/slide4.jpg"/>
+										<p class="previewDescription"><span>Переполненный склад</span></p>
+									</a>
+									<div class="caption">
+										<p class="previewDescription">Переполненный склад</p>
+									</div>
+								</li>
+								<li>
+									<a class="thumb" name="leaf" href="img/slide1.jpg">
+										<img src="img/slide1_preview.jpg"/>
+										<p class="previewDescription"><span>Сертификат соответствия</span></p>
+									</a>
+									<div class="caption">
+										<p class="previewDescription">Сертификат соответствия</p>
+									</div>
+								</li>
+								<li>
+									<a class="thumb" name="drop" href="img/slide2.jpg">
+										<img src="img/slide2.jpg"/>
+										<p class="previewDescription"><span>Завод по производству &laquo;Асфалайта&raquo;: загрузка сырья</span></p>
+									</a>
+									<div class="caption">
+										<p class="previewDescription">Завод по производству &laquo;Асфалайта&raquo;: загрузка сырья</p>
+									</div>
+								</li>
+								<li>
+									<a class="thumb" name="bigleaf" href="img/slide3.jpg">
+										<img src="img/slide3.jpg"/>
+										<p class="previewDescription"><span>Результат работы</span></p>
+									</a>
+									<div class="caption">
+										<p class="previewDescription">Результат работы</p>
+									</div>
+								</li>
+								<li>
+									<a class="thumb" name="lizard" href="img/slide4.jpg">
+										<img src="img/slide4.jpg"/>
+										<p class="previewDescription"><span>Переполненный склад</span></p>
+									</a>
+									<div class="caption">
+										<p class="previewDescription">Переполненный склад</p>
+									</div>
+								</li>
+								<li>
+									<a class="thumb" name="leaf" href="img/slide1.jpg">
+										<img src="img/slide1_preview.jpg"/>
+										<p class="previewDescription"><span>Сертификат соответствия</span></p>
+									</a>
+									<div class="caption">
+										<p class="previewDescription">Сертификат соответствия</p>
+									</div>
+								</li>
+								<li>
+									<a class="thumb" name="drop" href="img/slide2.jpg">
+										<img src="img/slide2.jpg"/>
+										<p class="previewDescription"><span>Завод по производству &laquo;Асфалайта&raquo;: загрузка сырья</span></p>
+									</a>
+									<div class="caption">
+										<p class="previewDescription">Завод по производству &laquo;Асфалайта&raquo;: загрузка сырья</p>
+									</div>
+								</li>
+								<li>
+									<a class="thumb" name="bigleaf" href="img/slide3.jpg">
+										<img src="img/slide3.jpg"/>
+										<p class="previewDescription"><span>Результат работы</span></p>
+									</a>
+									<div class="caption">
+										<p class="previewDescription">Результат работы</p>
+									</div>
+								</li>
+								<li>
+									<a class="thumb" name="lizard" href="img/slide4.jpg">
+										<img src="img/slide4.jpg"/>
+										<p class="previewDescription"><span>Переполненный склад</span></p>
+									</a>
+									<div class="caption">
+										<p class="previewDescription">Переполненный склад</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div id="gallery" class="content">
+							<div id="controls" class="controls"></div>
+							<div class="slideshow-container">
+								<div id="slideshow" class="slideshow"></div>
+							</div>
+							<div id="caption" class="caption-container"></div>
+						</div>
+						
+						<div style="clear: both;"></div>
 	    			</div>
 		    	</div>
 		    	<div class="whiteYellowBorder"></div>

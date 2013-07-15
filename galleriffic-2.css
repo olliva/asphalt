@@ -1,0 +1,233 @@
+div.content {
+	/* The display of content is enabled using jQuery so that the slideshow content won't display unless javascript is enabled. */
+	display: none;
+	position: relative;
+}
+div.content a, div.navigation a {
+	text-decoration: none;
+	color: #777;
+}
+
+div.controls {
+}
+div.controls a {
+	padding: 5px;
+}
+div.ss-controls {
+	display: none;
+}
+div.nav-controls {
+	width: 860px;
+	position: absolute;
+	top: 200px;
+	left: 50px;
+}
+div.slideshow-container {
+	position: relative;
+	clear: both;
+	width: 784px;
+	height: 446px; /* This should be set to be at least the height of the largest image in the slideshow */
+	margin: 0 auto;
+}
+div.loader {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-image: url('loader.gif');
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 784px;
+height: 446px;
+}
+div.slideshow {
+
+}
+div.slideshow span.image-wrapper {
+	display: block;
+}
+div.slideshow a.advance-link {
+	display: block;
+	height: 448px;
+width: 784px;
+overflow: hidden;
+display: block;
+position: relative;
+}
+div.slideshow a.advance-link:hover, div.slideshow a.advance-link:active, div.slideshow a.advance-link:visited {
+	text-decoration: none;
+}
+div.slideshow img {
+	width: 780px;
+	bottom: 0;
+position: absolute;
+}
+div.download {
+	float: right;
+}
+div.caption-container {
+	position: relative;
+	clear: left;
+	height: 75px;
+	text-align: center;
+}
+span.image-caption {
+	display: block;
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+div.caption {
+	padding: 12px;
+}
+div.image-title {
+	font-weight: bold;
+	font-size: 1.4em;
+}
+div.image-desc {
+	line-height: 1.3em;
+	padding-top: 12px;
+}
+div.navigation {
+	/* The navigation style is set using jQuery so that the javascript specific styles won't be applied unless javascript is enabled. */
+	width: 100% !important;
+	float: none !important;
+	height: 150px;
+	position: relative;
+}
+ul.thumbs {
+	clear: both;
+	margin: 0;
+	padding: 0;
+	width: 1010px;
+	margin-left: -50px;
+}
+ul.thumbs li {
+	float: left;
+	padding: 0;
+	list-style: none;
+	margin-left: 50px;
+	opacity: 1 !important;
+	width: 194px;
+}
+
+a.thumb {
+	padding: 2px;
+	display: block;
+}
+ul.thumbs li.selected a.thumb {
+}
+a.thumb:focus {
+	outline: none;
+}
+ul.thumbs img {
+	border: none;
+	display: block;
+	width: 194px;
+}
+div.pagination {
+	clear: both;
+}
+div.navigation div.top {
+	height: 11px;
+	position: absolute;
+	width: 1040px;
+	top: 65px;
+	left: -44px;
+}
+
+div.bottom{
+	display: none;
+}
+div.pagination a, div.pagination span.current, div.pagination span.ellipsis {
+	display: block;
+	float: left;
+	margin-right: 2px;
+	padding: 4px 7px 2px 7px;
+}
+div.pagination a:hover {
+	background-color: #eee;
+	text-decoration: none;
+}
+div.pagination span.current {
+	font-weight: bold;
+	background-color: #000;
+	border-color: #000;
+	color: #fff;
+}
+div.pagination span.ellipsis {
+	border: none;
+	padding: 5px 0 3px 2px;
+}
+
+.previous{
+	display: none !important;
+}
+a.prev{
+	background: url(img/leftPhotoArrow.gif) no-repeat !important;
+	width: 11px;
+	height: 18px;
+	display: block;
+	float: left;
+}
+a.next{
+	background: url(img/rightPhotoArrow.gif) no-repeat !important;
+	width: 11px;
+	height: 18px;
+	display: block;
+	float: right;
+}
+div.pagination a{
+	display: none;
+}
+div.pagination span.current{
+	display: none;
+}
+div.pagination a:first-child{
+	background: url(img/leftPhotoArrow.gif) no-repeat !important;
+	width: 11px;
+	height: 18px;
+	display: block;
+	float: left;
+}
+div.pagination a:last-child{
+	background: url(img/rightPhotoArrow.gif) no-repeat !important;
+	width: 11px;
+	height: 18px;
+	display: block;
+	float: right;
+}
+
+.cleafix:after{
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+#gallery{
+	height: auto;
+	position: relative;
+	margin-top: 118px;
+}
+li.selected .previewDescription span{
+	background: #fae7b2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
