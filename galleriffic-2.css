@@ -109,6 +109,7 @@ ul.thumbs li {
 	margin-left: 50px;
 	opacity: 1 !important;
 	width: 194px;
+	position: relative !important;
 }
 
 a.thumb {
