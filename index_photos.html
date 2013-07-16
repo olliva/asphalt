@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<meta name="viewport" content="width=device-width" />
+        <title>Style</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="stylesheet" type="text/css" href="site.css"></link>
+        <!--[if IE 7]>
+            <link rel="stylesheet" type="text/css" href="ie7.css"></link>
+        <![endif]-->
+        <!--[if IE 8]>
+            <link rel="stylesheet" type="text/css" href="ie8.css"></link>
+        <![endif]-->
+        <script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+        <script type="text/javascript">
+        $(document).ready(function(){
+        	function scroll_to_elem(elem,speed) {
+				if(document.getElementById(elem)) {
+					var destination = jQuery('#'+elem).offset().top;
+					jQuery("html,body").animate({scrollTop: destination}, speed);
+				}
+			}
+			$(".lastItem").click(function(){
+				scroll_to_elem ("target",2000)
+			});
+			$('.firstRadio').checked = true; 
+        });
+        </script>
+
+
+		<link rel="stylesheet" href="galleriffic-2.css" type="text/css" />
+		<script type="text/javascript" src="js/jquery-1.3.2.js"></script>
+		<script type="text/javascript" src="js/jquery.galleriffic.js"></script>
+		<script type="text/javascript" src="js/jquery.opacityrollover.js"></script>
+
+
+
+
+	
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				// We only want these styles applied when javascript is enabled
+				$('div.navigation').css({'width' : '300px', 'float' : 'left'});
+				$('div.content').css('display', 'block');
+
+				// Initially set opacity on thumbs and add
+				// additional styling for hover effect on thumbs
+				var onMouseOutOpacity = 0.67;
+				$('#thumbs ul.thumbs li').opacityrollover({
+					mouseOutOpacity:   onMouseOutOpacity,
+					mouseOverOpacity:  1.0,
+					fadeSpeed:         'fast',
+					exemptionSelector: '.selected'
+				});
+				
+				// Initialize Advanced Galleriffic Gallery
+				var gallery = $('#thumbs').galleriffic({
+					delay:                     2500,
+					numThumbs:                 4,
+					preloadAhead:              10,
+					enableTopPager:            true,
+					enableBottomPager:         true,
+					maxPagesToShow:            7,
+					imageContainerSel:         '#slideshow',
+					controlsContainerSel:      '#controls',
+					captionContainerSel:       '#caption',
+					renderSSControls:          true,
+					renderNavControls:         true,
+					playLinkText:              'Play Slideshow',
+					pauseLinkText:             'Pause Slideshow',
+					prevLinkText:              '',
+					nextLinkText:              '',
+					nextPageLinkText:          '',
+					prevPageLinkText:          '',
+					enableHistory:             false,
+					autoStart:                 false,
+					syncTransitions:           true,
+					defaultTransitionDuration: 900,
+					onSlideChange:             function(prevIndex, nextIndex) {
+						// 'this' refers to the gallery, which is an extension of $('#thumbs')
+						this.find('ul.thumbs').children()
+							.eq(prevIndex).fadeTo('fast', onMouseOutOpacity).end()
+							.eq(nextIndex).fadeTo('fast', 1.0);
+					},
+					onPageTransitionOut:       function(callback) {
+						this.fadeTo('fast', 0.0, callback);
+					},
+					onPageTransitionIn:        function() {
+						this.fadeTo('fast', 1.0);
+					}
+				});
+				$("div.pagination :last-child").css("display","block");
+				$("div.pagination :last-child").css("float","right");
+			});
+		</script>
+		<script type="text/javascript">
+			document.write('<style>.noscript { display: none; }</style>');
+		</script>
+		<!--[if lt IE 8]>
+<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js"></script>
+<![endif]-->
+    </head>
+    <body>
+    	<div class="page photoPage notMainPage">
+    		<div class="pageContainer">
+	    		<img src="img/fon.png" alt="" class="fon">
+	    	</div>
+	    	<div class="header">
+	    		<div class="pageContainer clearfix">
+	    			<div class="logo">
+	    				<a href=""><img src="img/whiteLogo.jpg" alt="" class="logoImage"></a>
+	    			</div>
+	    			<div class="menu">
+	    				<ul class="clearfix">
+	    					<li class="menuItem"><a href="">ДОКУМЕНТЫ</a></li>
+	    					<li class="menuItem"><a href="">ФОТОГАЛЕРЕЯ</a></li>
+	    					<li class="menuItem"><a href="">ВИДЕО</a></li>
+	    					<li class="menuItem"><a href="">ДИЛЕРАМ</a></li>
+	    					<li class="menuItem"><a href="">ОТЗЫВЫ</a></li>
+	    					<li class="menuItem lastItem"><span>ЗАКАЗАТЬ</span></li>
+	    				</ul>
+	    				<div class="ticket">
+	    					<div class="ticketContent">
+	    						<div class="telephone">Заказ по телефону <span class="notitalic">(+7 495) 775-83-34</span></div>
+	    						<div class="email">Заказ по e-mail <a href="">info@asphalite.ru</a></div>
+	    					</div>
+	    					<div class="borderBottom">
+	    					</div>
+	    				</div>
+	    			</div>
+	    		</div>
+	    	</div>
+	    	<div class="content">
+	    		<div class="pageContainer">
+	    			<div class="dilerinform">
+	    				<div class="dilerInformHeader">Фотогалерея</div>
+	    				<ul class="photoGaleries clearfix">
+	    					<li class="activePhotoLibrary"><a href="#">Фотографии с объектов <span class="photoNumber">(10 фото)</span></a></li>
+	    					<li><a href="#">Производство Асфалайта <span class="photoNumber">(20 фото)</span></a></li>
+	    					<li><a href="#">Инструкция в фото <span class="photoNumber">(5 фото)</span></a></li>
+	    				</ul>
+	    			</div>
+    			</div>
+    			<div class="commentsPart">
+    				<div class="whiteBorder"></div>
+    				<div class="pageContainer">
+    					<div class="photoLibrarylName">Фотографии с обьектов</div>
+							<div id="thumbs" class="navigation">
+							<ul class="thumbs clearfix noscript">
+								<li>
+									<a class="thumb" name="leaf" href="img/slide1.jpg">
+										<div class="previewImageContainer">
+											<img src="img/slide1_preview.jpg"/>
+											<img src="img/whiteLoop.png" alt="" class="whiteLoop">
+										</div>
+										<p class="previewDescription"><span>Сертификат соответствия</span></p>
+									</a>
+									<div class="caption">
+										<p class="previewDescription">Сертификат соответствия</p>
+									</div>
+								</li>
+								<li>
+									<a class="thumb" name="drop" href="img/slide2.jpg">
+										<div class="previewImageContainer">
+											<img src="img/slide2.jpg"/>
+											<img src="img/whiteLoop.png" alt="" class="whiteLoop"/>
+										</div>
+										<p class="previewDescription"><span>Завод по производству &laquo;Асфалайта&raquo;: загрузка сырья</span></p>
+									</a>
+									<div class="caption">
+										<p class="previewDescription">Завод по производству &laquo;Асфалайта&raquo;: загрузка сырья</p>
+									</div>
+								</li>
+								<li>
+									<a class="thumb" name="bigleaf" href="img/slide3.jpg">
+										<div class="previewImageContainer">
+											<img src="img/slide3.jpg"/>
+											<img src="img/whiteLoop.png" alt="" class="whiteLoop"/>
+										</div>
+										<p class="previewDescription"><span>Результат работы</span></p>
+									</a>
+									<div class="caption">
+										<p class="previewDescription">Результат работы</p>
+									</div>
+								</li>
+								<li>
+									<a class="thumb" name="lizard" href="img/slide4.jpg">
+										<div class="previewImageContainer">
+											<img src="img/slide4.jpg"/>
+											<img src="img/whiteLoop.png" alt="" class="whiteLoop"/>
+										</div>
+										<p class="previewDescription"><span>Переполненный склад</span></p>
+									</a>
+									<div class="caption">
+										<p class="previewDescription">Переполненный склад</p>
+									</div>
+								</li>
+								<li>
+									<a class="thumb" name="drop" href="img/slide2.jpg">
+										<div class="previewImageContainer">
+											<img src="img/slide2.jpg"/>
+											<img src="img/whiteLoop.png" alt="" class="whiteLoop"/>
+										</div>
+										<p class="previewDescription"><span>Завод по производству &laquo;Асфалайта&raquo;: загрузка сырья</span></p>
+									</a>
+									<div class="caption">
+										<p class="previewDescription">Завод по производству &laquo;Асфалайта&raquo;: загрузка сырья</p>
+									</div>
+								</li>
+								<li>
+									<a class="thumb" name="leaf" href="img/slide1.jpg">
+										<div class="previewImageContainer">
+											<img src="img/slide1_preview.jpg"/>
+											<img src="img/whiteLoop.png" alt="" class="whiteLoop"/>
+										</div>
+										<p class="previewDescription"><span>Сертификат соответствия</span></p>
+									</a>
+									<div class="caption">
+										<p class="previewDescription">Сертификат соответствия</p>
+									</div>
+								</li>
+								<li>
+									<a class="thumb" name="lizard" href="img/slide4.jpg">
+										<div class="previewImageContainer">
+											<img src="img/slide4.jpg"/>
+											<img src="img/whiteLoop.png" alt="" class="whiteLoop"/>
+										</div>
+										<p class="previewDescription"><span>Переполненный склад</span></p>
+									</a>
+									<div class="caption">
+										<p class="previewDescription">Переполненный склад</p>
+									</div>
+								</li>
+								<li>
+									<a class="thumb" name="bigleaf" href="img/slide3.jpg">
+										<div class="previewImageContainer">
+											<img src="img/slide3.jpg"/>
+											<img src="img/whiteLoop.png" alt="" class="whiteLoop"/>
+										</div>
+										<p class="previewDescription"><span>Результат работы</span></p>
+									</a>
+									<div class="caption">
+										<p class="previewDescription">Результат работы</p>
+									</div>
+								</li>
+								<li>
+									<a class="thumb" name="lizard" href="img/slide4.jpg">
+										<div class="previewImageContainer">
+											<img src="img/slide4.jpg"/>
+											<img src="img/whiteLoop.png" alt="" class="whiteLoop"/>
+										</div>
+										<p class="previewDescription"><span>Переполненный склад</span></p>
+									</a>
+									<div class="caption">
+										<p class="previewDescription">Переполненный склад</p>
+									</div>
+								</li>
+								<li>
+									<a class="thumb" name="leaf" href="img/slide1.jpg">
+										<div class="previewImageContainer">
+											<img src="img/slide1_preview.jpg"/>
+											<img src="img/whiteLoop.png" alt="" class="whiteLoop"/>
+										</div>
+										<p class="previewDescription"><span>Сертификат соответствия</span></p>
+									</a>
+									<div class="caption">
+										<p class="previewDescription">Сертификат соответствия</p>
+									</div>
+								</li>
+								<li>
+									<a class="thumb" name="bigleaf" href="img/slide3.jpg">
+										<div class="previewImageContainer">
+											<img src="img/slide3.jpg"/>
+											<img src="img/whiteLoop.png" alt="" class="whiteLoop"/>
+										</div>
+										<p class="previewDescription"><span>Результат работы</span></p>
+									</a>
+									<div class="caption">
+										<p class="previewDescription">Результат работы</p>
+									</div>
+								</li>
+								<li>
+									<a class="thumb" name="drop" href="img/slide2.jpg">
+										<div class="previewImageContainer">
+											<img src="img/slide2.jpg"/>
+											<img src="img/whiteLoop.png" alt="" class="whiteLoop"/>
+										</div>
+										<p class="previewDescription"><span>Завод по производству &laquo;Асфалайта&raquo;: загрузка сырья</span></p>
+									</a>
+									<div class="caption">
+										<p class="previewDescription">Завод по производству &laquo;Асфалайта&raquo;: загрузка сырья</p>
+									</div>
+								</li>
+								
+								
+								<li>
+									<a class="thumb" name="leaf" href="img/slide1.jpg">
+										<div class="previewImageContainer">
+											<img src="img/slide1_preview.jpg"/>
+											<img src="img/whiteLoop.png" alt="" class="whiteLoop"/>
+										</div>
+										<p class="previewDescription"><span>Сертификат соответствия</span></p>
+									</a>
+									<div class="caption">
+										<p class="previewDescription">Сертификат соответствия</p>
+									</div>
+								</li>
+								<li>
+									<a class="thumb" name="drop" href="img/slide2.jpg">
+										<div class="previewImageContainer">
+											<img src="img/slide2.jpg"/>
+											<img src="img/whiteLoop.png" alt="" class="whiteLoop"/>
+										</div>
+										<p class="previewDescription"><span>Завод по производству &laquo;Асфалайта&raquo;: загрузка сырья</span></p>
+									</a>
+									<div class="caption">
+										<p class="previewDescription">Завод по производству &laquo;Асфалайта&raquo;: загрузка сырья</p>
+									</div>
+								</li>
+								<li>
+									<a class="thumb" name="bigleaf" href="img/slide3.jpg">
+										<div class="previewImageContainer">
+											<img src="img/slide3.jpg"/>
+											<img src="img/whiteLoop.png" alt="" class="whiteLoop"/>
+										</div>
+										<p class="previewDescription"><span>Результат работы</span></p>
+									</a>
+									<div class="caption">
+										<p class="previewDescription">Результат работы</p>
+									</div>
+								</li>
+								<li>
+									<a class="thumb" name="lizard" href="img/slide4.jpg">
+										<div class="previewImageContainer">
+											<img src="img/slide4.jpg"/>
+											<img src="img/whiteLoop.png" alt="" class="whiteLoop"/>
+										</div>
+										<p class="previewDescription"><span>Переполненный склад</span></p>
+									</a>
+									<div class="caption">
+										<p class="previewDescription">Переполненный склад</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div id="gallery" class="content">
+							<div id="controls" class="controls"></div>
+							<div class="slideshow-container">
+								<div id="slideshow" class="slideshow"></div>
+							</div>
+							<div id="caption" class="caption-container"></div>
+						</div>
+						<div style="clear: both;"></div>
+	    			</div>
+		    	</div>
+		    	<div class="whiteYellowBorder"></div>
+		    </div>
+	    	<div class="oder clearfix">
+	    		
+	    		<div class="pageContainer">
+	    			<form action="" class="clearfix">
+		    			<div class="oderHeader" id="target">Оформление заказа</div>
+	    				<div class="leftOderColumn">
+	    					<div class="smallHeader">Ваше имя<span class="red"><sup>*</sup></span></div>
+	    					<input type="text"  class="oderInput"/>
+	    					<div class="smallHeader">Телефон<span class="red"><sup>*</sup></span></div>
+	    					<input type="text"  class="oderInput telephone"/>
+	    					<div class="smallHeader">E-mail</div>
+	    					<input type="text"  class="oderInput"/>
+	    				</div>
+	    				<div class="centerOderColumn">
+	    					<div class="smallHeader">Упаковка</div>
+	    					<div class="inpForm">
+	    						<label class="radioLabel">
+			    					<input type="radio" name="choise" class="radioInput firstRadio" checked/>
+			                        1 тонна: без упаковки
+			                    </label><label class="rightLabel">6 320 р</label>
+	                        </div>
+	                        <div class="inpForm">
+	                        	<label class="radioLabel">
+			                        <input type="radio" name="choise" class="radioInput"/>
+			                        1 тонна: в бигбэгах
+			                    </label><label class="rightLabel">7 200 р</label>
+	                        </div>
+	                        <div class="inpForm">
+	                        	<label class="radioLabel">
+			                        <input type="radio" name="choise" class="radioInput"/>
+			                        25кг: в ведрах
+			                    </label><label class="rightLabel">305 р</label>
+	                        </div>
+	                        <div class="smallItalicText">Цены указаны без учета стоимости доставки. Самовывоз возможен с завода в г. Рязани.</div>
+	                        <div class="mediumHeader">Сумма</div>
+	    				</div>
+	    				<div class="rightOderColumn">
+	    					<div class="smallHeader">Количество<span class="red"><sup>*</sup></span></div>
+	    					<input type="text" class="oderInput telephone" /><span class="italic">ведер</span>
+	    					<div class="smallHeader">E-mail</div>
+	    					<textarea name="" id="" cols="30" rows="7" class="oderTextArea"></textarea>
+	    					<div class="sendButton"><img src="img/sendButton.png" alt=""/></div>
+	    				</div>
+    				</form>
+	    		</div>
+	    	</div>
+	    	<div class="footer clearfix">
+	    		<div class="footerBorder"></div>
+	    		<div class="pageContainer">
+	    			<div class="leftOderColumn">
+	    				<div class="mediumHeader">Заказ по телефону</div>
+	    				<div class="telNumber">+7 495 775-83-34</div>
+	    			</div>
+	    			<div class="centerOderColumn">
+	    				<div class="mediumHeader">Заказ по e-mail</div>
+	    				<div class="footerEmail">
+	    					<a href="">info@asphalite.ru</a>
+	    				</div>
+	    				<div class="mediumHeader">Мы в социальных сетях</div>
+	    				<div class="socialNets clearfix">
+	    					<a class="socialItem facebook" href="#"></a>
+	    					<a class="socialItem twitter" href="#"></a>
+	    					<a class="socialItem lj" href="#"></a>
+	    				</div>
+	    			</div>
+	    			<div class="rightOderColumn">
+	    				<img src="img/pureProduct.png" alt="">
+	    				<div class="copyright">© 2008 - 2012 Группа предприятий &laquo;РАД&raquo;</div>
+	    				<div class="creator">
+	    					Все права защищены<br>
+	    					Создание сайта - <a href="http://greensight.ru">Greensight</a>
+	    				</div>
+	    			</div>
+	    		</div>
+	    	</div>
+    	</div>
+    </body>
+</html>

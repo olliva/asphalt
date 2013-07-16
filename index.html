@@ -25,32 +25,18 @@
 				scroll_to_elem ("target",2000)
 			});
 			$('.firstRadio').checked = true; 
-
-
-			$(".previewVideoContainer div").click(function(){
-				$("span.activePreview").removeClass('activePreview');
-				$(this).find("span").addClass('activePreview');
-				var colClass = $(this).attr('name');
-				$(".activeVideo").removeClass('activeVideo');
-				var targetVideo = document.getElementById(colClass);
-				$(targetVideo).addClass('activeVideo');
-			});
         });
         </script>
-
-
-
-
     </head>
     <body>
-    	<div class="page videoPage notMainPage">
+    	<div class="page">
     		<div class="pageContainer">
 	    		<img src="img/fon.png" alt="" class="fon">
 	    	</div>
 	    	<div class="header">
 	    		<div class="pageContainer clearfix">
 	    			<div class="logo">
-	    				<a href=""><img src="img/whiteLogo.jpg" alt="" class="logoImage"></a>
+	    				<a href=""><img src="img/logo.png" alt="" class="logoImage"></a>
 	    			</div>
 	    			<div class="menu">
 	    				<ul class="clearfix">
@@ -74,132 +60,114 @@
 	    	</div>
 	    	<div class="content">
 	    		<div class="pageContainer">
-	    			<div class="dilerinform">
-	    				<div class="dilerInformHeader">Видео</div>
-	    				<div class="videosLine clearfix">
-	    					<div class="previewVideoContainer">
-	    						<div name="video_1">
-	    							<div class="previewCont">
-		    							<img src="img/slide1_preview.jpg" alt="">
-		    							<img src="img/whitePlayButton.png" alt="" class="whitePlayButton"/>
-		    						</div>
-									<p class="previewDescription">
-										<span class="activePreview">Сертификат соответствия</span>
-									</p>
-	    						</div>
+	    			<div class="textContent clearfix">
+	    				<div class="leftColumn">
+	    					<div class="bigHeader">
+	    						Готовая к применению холодная асфальто-бетонная смесь
 	    					</div>
-	    					<div class="previewVideoContainer">
-	    						<div name="video_2">
-	    							<div class="previewCont">
-		    							<img src="img/slide2_preview.jpg" alt="">
-		    							<img src="img/whitePlayButton.png" alt="" class="whitePlayButton"/>
-		    						</div>
-									<p class="previewDescription"><span>Завод по производству &laquo;Асфалайта&#187;: загрузка сырья</span></p>
-	    						</div>
+	    					<div class="italicContent">
+	    						Применяется для обустройства тротуаров, автомобильных дорог, парковых дорожек, парковочных площадок и придомовых территорий
 	    					</div>
-	    					<div class="previewVideoContainer">
-	    						<div name="video_3">
-	    							<div class="previewCont">
-		    							<img src="img/slide3_prewiev.jpg" alt="">
-		    							<img src="img/whitePlayButton.png" alt="" class="whitePlayButton"/>
-		    						</div>
-									<p class="previewDescription"><span>Результат работы</span></p>
-	    						</div>
-	    					</div>
-	    					<div class="previewVideoContainer">
-	    						<div name="video_4">
-	    							<div class="previewCont">
-		    							<img src="img/slide4_preview.jpg" alt="">
-		    							<img src="img/whitePlayButton.png" alt="" class="whitePlayButton"/>
-		    						</div>
-									<p class="previewDescription"><span>Переполненный склад</span></p>
-	    						</div>
+	    					<div class="mediumHeader">
+	    						Удобно использовать<br>на даче или рядом со своим коттеджем
+	    						<img src="img/leftImg.png" alt=""/>
 	    					</div>
 	    				</div>
-	    				<div class="mainVideo">
-	    					<div class="video video_1 activeVideo" id="video_1">
-	    						<p class="mainVideoName">Сертификат соответствия</p>
-		    					<inframe width="782" height="448">
-		    						<param name="movie" value="http://www.youtube.com/v/ja-qjGeDBZQ?version=3&amp;hl=en_US">
-		    						<param name="allowFullScreen" value="true">
-		    						<param name="allowscriptaccess" value="always">
-		    						<embed src="http://www.youtube.com/v/ja-qjGeDBZQ?version=3&amp;hl=en_US" type="application/x-shockwave-flash" width="782" height="448" allowscriptaccess="always" allowfullscreen="true" wmode="transparent">
-	    						</inframe>
-    						</div>
-    						<div class="video video_2" id="video_2">
-    							<p class="mainVideoName">Завод по производству &laquo;Асфалайта&#187;: загрузка сырья</p>
-	    						<inframe width="782" height="448">
-		    						<param name="movie" value="http://www.youtube.com/v/ja-qjGeDBZQ?version=3&amp;hl=en_US">
-		    						<param name="allowFullScreen" value="true">
-		    						<param name="allowscriptaccess" value="always">
-		    						<embed src="http://www.youtube.com/v/cMfeWyVBidk?version=3&amp;hl=en_US" type="application/x-shockwave-flash" width="782" height="448" allowscriptaccess="always" allowfullscreen="true" wmode="transparent">
-	    						</inframe>
-    						</div>
-    						<div class="video video_3" id="video_3">
-    							<p class="mainVideoName">Результат работы</p>
-	    						<inframe width="782" height="448">
-		    						<param name="movie" value="http://www.youtube.com/v/ja-qjGeDBZQ?version=3&amp;hl=en_US">
-		    						<param name="allowFullScreen" value="true">
-		    						<param name="allowscriptaccess" value="always">
-		    						<embed src="http://www.youtube.com/v/FCNmTxJL4OI?version=3&amp;hl=en_US" type="application/x-shockwave-flash" width="782" height="448" allowscriptaccess="always" allowfullscreen="true" wmode="transparent">
-	    						</inframe>
-    						</div>
-    						<div class="video video_4" id="video_4">
-    							<p class="mainVideoName">Переполненный склад</p>
-	    						<inframe width="782" height="448">
-		    						<param name="movie" value="http://www.youtube.com/v/ja-qjGeDBZQ?version=3&amp;hl=en_US">
-		    						<param name="allowFullScreen" value="true">
-		    						<param name="allowscriptaccess" value="always">
-		    						<embed src="http://www.youtube.com/v/dfjcECDxuy4?version=3&amp;hl=en_US" type="application/x-shockwave-flash" width="782" height="448" allowscriptaccess="always" allowfullscreen="true" wmode="transparent">
-	    						</inframe>
-    						</div>
+	    				<div class="centerColumn">
+	    					<div class="mediumHeader">
+	    						Идеален для ремонта дороги своими руками
+	    						<img src="img/centerImg.png" alt=""/>
+	    					</div>
+	    				</div>
+	    				<div class="rightColumn">
+	    					<div class="mediumHeader">
+	    						Недорогой и удобный способ заделать яму во дворе
+	    						<img src="img/rightImg.png" alt="">
+	    					</div>
+	    				</div>
+	    				<div class="box">
+	    					<img src="img/box.jpg" alt="" class="bigBox">
+	    					<div class="ecology">
+	    						Чистый экологичный продукт
+	    					</div>
 	    				</div>
 	    			</div>
-		    	</div>
-		    	<div class="whiteYellowBorder"></div>
-		    </div>
-	    	<div class="oder clearfix">
-	    		
+	    		</div>
+	    		<div class="videoPart">
+	    			<div class="videoContainer">
+	    				<div class="pageContainer">
+		    				<div class="videoContent">
+		    					Видеоинструкция<br>от &laquo;Асфалайта&raquo;<br>
+		    					<img src="img/playButton.png" alt="" class="playButton"/>
+		    				</div>
+	    				</div>
+	    			</div>
+	    			<div class="ground"></div>
+	    		</div>
 	    		<div class="pageContainer">
-	    			<div class="oderHeader" id="target">Оформление заказа</div>
-    				<div class="leftOderColumn">
-    					<div class="smallHeader">Ваше имя<span class="red"><sup>*</sup></span></div>
-    					<input type="text"  class="oderInput"/>
-    					<div class="smallHeader">Телефон<span class="red"><sup>*</sup></span></div>
-    					<input type="text"  class="oderInput telephone"/>
-    					<div class="smallHeader">E-mail</div>
-    					<input type="text"  class="oderInput"/>
-    				</div>
-    				<div class="centerOderColumn">
-    					<div class="smallHeader">Упаковка</div>
-    					<div class="inpForm">
-    						<label class="radioLabel">
-		    					<input type="radio" name="choise" class="radioInput firstRadio" checked/>
-		                        1 тонна: без упаковки
-		                    </label><label class="rightLabel">6 320 р</label>
-                        </div>
-                        <div class="inpForm">
-                        	<label class="radioLabel">
-		                        <input type="radio" name="choise" class="radioInput"/>
-		                        1 тонна: в бигбэгах
-		                    </label><label class="rightLabel">7 200 р</label>
-                        </div>
-                        <div class="inpForm">
-                        	<label class="radioLabel">
-		                        <input type="radio" name="choise" class="radioInput"/>
-		                        25кг: в ведрах
-		                    </label><label class="rightLabel">305 р</label>
-                        </div>
-                        <div class="smallItalicText">Цены указаны без учета стоимости доставки. Самовывоз возможен с завода в г. Рязани.</div>
-                        <div class="mediumHeader">Сумма</div>
-    				</div>
-    				<div class="rightOderColumn">
-    					<div class="smallHeader">Количество<span class="red"><sup>*</sup></span></div>
-    					<input type="text" class="oderInput telephone" /><span class="italic">ведер</span>
-    					<div class="smallHeader">E-mail</div>
-    					<textarea name="" id="" cols="30" rows="7" class="oderTextArea"></textarea>
-    					<div class="sendButton"><img src="img/sendButton.png" alt=""/></div>
-    				</div>
+		    		<div class="instrContainer">
+		    			<div class="instructionBG"></div>
+			    		<div class="instruction">
+			    			<div class="instrBorder"></div>
+			    			<a href="" class="instrImg"><img src="img/instr.png" alt="" /></a>
+			    			<div class="instrText"><span>Посмотреть пошаговую инструкцию</span><span> по применению</span></div>
+			    		</div>
+					</div>
+				</div>
+	    	</div>
+	    	<div class="oder clearfix">
+	    		<div class="pageContainer">
+		    		<div class="instrContainer">
+		    			<div class="instructionBG"></div>
+			    		<div class="instruction">
+			    			<div class="instrBorder"></div>
+			    			<a href="" class="instrImg"><img src="img/instr.png" alt="" /></a>
+			    			<div class="instrText"><span>Посмотреть пошаговую инструкцию</span><span> по применению</span></div>
+			    		</div>
+	    			</div>
+				</div>
+	    		<div class="pageContainer">
+	    			<form action="" class="clearfix">
+		    			<div class="oderHeader" id="target">Оформление заказа</div>
+	    				<div class="leftOderColumn">
+	    					<div class="smallHeader">Ваше имя<span class="red"><sup>*</sup></span></div>
+	    					<input type="text"  class="oderInput"/>
+	    					<div class="smallHeader">Телефон<span class="red"><sup>*</sup></span></div>
+	    					<input type="text"  class="oderInput telephone"/>
+	    					<div class="smallHeader">E-mail</div>
+	    					<input type="text"  class="oderInput"/>
+	    				</div>
+	    				<div class="centerOderColumn">
+	    					<div class="smallHeader">Упаковка</div>
+	    					<div class="inpForm">
+	    						<label class="radioLabel">
+			    					<input type="radio" name="choise" class="radioInput firstRadio" checked/>
+			                        1 тонна: без упаковки
+			                    </label><label class="rightLabel">6 320 р</label>
+	                        </div>
+	                        <div class="inpForm">
+	                        	<label class="radioLabel">
+			                        <input type="radio" name="choise" class="radioInput"/>
+			                        1 тонна: в бигбэгах
+			                    </label><label class="rightLabel">7 200 р</label>
+	                        </div>
+	                        <div class="inpForm">
+	                        	<label class="radioLabel">
+			                        <input type="radio" name="choise" class="radioInput"/>
+			                        25кг: в ведрах
+			                    </label><label class="rightLabel">305 р</label>
+	                        </div>
+	                        <div class="smallItalicText">Цены указаны без учета стоимости доставки. Самовывоз возможен с завода в г. Рязани.</div>
+	                        <div class="mediumHeader">Сумма</div>
+	    				</div>
+	    				<div class="rightOderColumn">
+	    					<div class="smallHeader">Количество<span class="red"><sup>*</sup></span></div>
+	    					<input type="text" class="oderInput telephone" /><span class="italic">ведер</span>
+	    					<div class="smallHeader">E-mail</div>
+	    					<textarea name="" id="" cols="30" rows="7" class="oderTextArea"></textarea>
+	    					<div class="sendButton"><img src="img/sendButton.png" alt=""/></div>
+	    				</div>
+	    			</form>
 	    		</div>
 	    	</div>
 	    	<div class="footer clearfix">
@@ -229,6 +197,7 @@
 	    					Создание сайта - <a href="http://greensight.ru">Greensight</a>
 	    				</div>
 	    			</div>
+
 	    		</div>
 	    	</div>
     	</div>

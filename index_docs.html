@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<meta name="viewport" content="width=device-width" />
+        <title>Style</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="stylesheet" type="text/css" href="site.css"></link>
+        <!--[if IE 7]>
+            <link rel="stylesheet" type="text/css" href="ie7.css"></link>
+        <![endif]-->
+        <!--[if IE 8]>
+            <link rel="stylesheet" type="text/css" href="ie8.css"></link>
+        <![endif]-->
+        <script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+        <script type="text/javascript">
+        $(document).ready(function(){
+        	function scroll_to_elem(elem,speed) {
+				if(document.getElementById(elem)) {
+					var destination = jQuery('#'+elem).offset().top;
+					jQuery("html,body").animate({scrollTop: destination}, speed);
+				}
+			}
+			$(".lastItem").click(function(){
+				scroll_to_elem ("target",2000)
+			});
+			$('.firstRadio').checked = true; 
+        });
+        </script>
+        <!-- Magnific Popup core JS file -->
+		<script src="js/magnific-popup.min.js"></script> 
+		<!-- Magnific Popup core CSS file -->
+		<link rel="stylesheet" href="magnific-popup.css"> 
+		<script type="text/javascript">
+		$(document).ready(function() {
+			  $('.popup-doc1').magnificPopup({
+				  type:'inline',
+				  midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+				});
+			  $('.popup-doc2').magnificPopup({
+				  type:'inline',
+				  midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+				});
+			  });
+		</script>
+    </head>
+    <body>
+    	<div class="page docP notMainPage">
+    		<div class="pageContainer">
+	    		<img src="img/fon.png" alt="" class="fon">
+	    	</div>
+	    	<div class="header">
+	    		<div class="pageContainer clearfix">
+	    			<div class="logo">
+	    				<a href=""><img src="img/whiteLogo.jpg" alt="" class="logoImage"></a>
+	    			</div>
+	    			<div class="menu">
+	    				<ul class="clearfix">
+	    					<li class="menuItem"><a href="">ДОКУМЕНТЫ</a></li>
+	    					<li class="menuItem"><a href="">ФОТОГАЛЕРЕЯ</a></li>
+	    					<li class="menuItem"><a href="">ВИДЕО</a></li>
+	    					<li class="menuItem"><a href="">ДИЛЕРАМ</a></li>
+	    					<li class="menuItem"><a href="">ОТЗЫВЫ</a></li>
+	    					<li class="menuItem lastItem"><span>ЗАКАЗАТЬ</span></li>
+	    				</ul>
+	    				<div class="ticket">
+	    					<div class="ticketContent">
+	    						<div class="telephone">Заказ по телефону <span class="notitalic">(+7 495) 775-83-34</span></div>
+	    						<div class="email">Заказ по e-mail <a href="#">info@asphalite.ru</a></div>
+	    					</div>
+	    					<div class="borderBottom">
+	    					</div>
+	    				</div>
+	    			</div>
+	    		</div>
+	    	</div>
+	    	<div class="content">
+	    		<div class="pageContainer">
+	    			<div class="dilerinform">
+	    				<div class="dilerInformHeader">Документы</div>
+	    				<div class="documentsContainer">
+	    					<div class="documentsLine clearfix">
+	    						<div class="oneDocument">
+	    							<div class="document realDoc">
+	    								<a href="#doc1-popup" class="popup-doc1"><img src="img/doc1.jpg" alt="" class="stDoc"></a>
+	    								<img src="img/loop.png" alt="" class="loop"/>
+	    							</div>
+	    							<div id="doc1-popup" class="white-popup mfp-hide">
+									  <img src="img/doc1.jpg">
+									</div>
+	    							<div class="documentBorderBottom"></div>
+	    							Сертификат соответствия
+	    						</div>
+	    						<div class="oneDocument">
+	    							<div class="document realDoc">
+	    								<a href="#doc2-popup" class="popup-doc2"><img src="img/doc2.jpg" alt="" class="stDoc"></a>
+	    								<img src="img/loop.png" alt="" class="loop"/>
+	    							</div>
+	    							<div id="doc2-popup" class="white-popup mfp-hide">
+									  <img src="img/doc2.jpg">
+									</div>
+	    							<div class="documentBorderBottom"></div>
+	    							Сертификат соответствия
+	    						</div>
+	    						<div class="oneDocument">
+	    							<div class="document unknownDoc">
+	    								<a href=""><span>Протокол сертификационных испытаний, 25 Мб, pdf</span></a>
+	    							</div>
+	    							<div class="documentBorderBottom"></div>
+	    						</div>
+	    						<div class="oneDocument">
+	    							<div class="document unknownDoc">
+	    								<a href=""><span>Акт инспекционного контроля</span></a>
+	    							</div>
+	    							<div class="documentBorderBottom"></div>
+	    						</div>
+	    					</div>
+	    					<div class="documentsLine clearfix">
+	    						<div class="oneDocument">
+	    							<div class="document unknownDoc">
+	    								<a href=""><span>Протокол сертификационных испытаний, 25 Мб, pdf</span></a>
+	    							</div>
+	    							<div class="documentBorderBottom"></div>
+	    						</div>
+	    						<div class="oneDocument">
+	    							<div class="document unknownDoc">
+	    								<a href=""><span>Акт инспекционного контроля</span></a>
+	    							</div>
+	    							<div class="documentBorderBottom"></div>
+	    						</div>
+	    						<div class="oneDocument">
+	    							<div class="document unknownDoc">
+	    								<a href="#"><span>Информационная справка, 5 Мб, doc</span></a>
+	    							</div>
+	    							<div class="documentBorderBottom"></div>
+	    						</div>
+	    						<div class="oneDocument">
+	    							<div class="document unknownDoc">
+	    								<a href=""><span>Акт инспекционного контроля</span></a>
+	    							</div>
+	    							<div class="documentBorderBottom"></div>
+	    						</div>
+	    					</div>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="algorithm">
+    				<div class="whiteBorder"></div>
+
+    				<div class="pageContainer">
+    					<div class="rightAlgInstr">
+    						<p>Асфалайт используется для аварийного ямочного ремонта асфальтобетонных покрытий</p>
+    						<p class="secondLine">круглый год<br>от -15 <sup>o</sup>C до + 40 <sup>o</sup>C</p>
+    						<p class="thirdLine">и готов к эксплуатации сразу после ремонта</p>
+    					</div>
+	    				<div class="appHeader">Самая простая инструкция в мире</div>
+	    				<div class="algorithmLine clearfix">
+	    					<div class="algorithmStep">
+	    						<img src="img/step1.gif" alt="" class="algStepNumber"/>
+	    						<p class="algStepHeader">Очистить яму от грязи, остатков старого покрытия, воды и снега.</p>
+	    						<p class="algStepContent">Например: метлой.</p>
+	    					</div>
+	    					<div class="algorithmStep">
+	    						<img src="img/step2.gif" alt="" class="algStepNumber"/>
+	    						<p class="algStepHeader">Заполнить яму Асфалайтом<br>и уплотнить лопатой, ручной трамбовкой, либо наезжая колесом автомобиля.</p>
+	    						<p class="algStepContent">Если яма глубокая рекомендуется наносить и уплотнять Асфалайт слоями 2,5 - 5 см.</p>
+	    					</div>
+	    				</div>
+	    				<div class="algorithmLine clearfix">
+	    					<div class="algorithmStep">
+	    						<img src="img/step3.gif" alt="" class="algStepNumber"/>
+	    						<p class="algStepHeader">Оставить выступ 1 см<br>над поверхностью отремонтированной ямы</p>
+	    						<p class="algStepContent">Для дальнейшего уплотнения транспортным потоком.</p>
+	    					</div>
+	    					<div class="algorithmStep">
+	    						<img src="img/step4.gif" alt="" class="algStepNumber"/>
+	    						<p class="algStepHeader">Открыть движение</p>
+	    						<img src="img/step4Img.jpg" alt="" class="fourthStepImg">
+	    					</div>
+	    				</div>
+	    				
+	    			</div>
+		    	</div>
+		    	<div class="whiteYellowBorder"></div>
+		    </div>
+	    	<div class="oder clearfix">
+	    		
+	    		<div class="pageContainer">
+	    			<form action="" class="clearfix">
+		    			<div class="oderHeader" id="target">Оформление заказа</div>
+	    				<div class="leftOderColumn">
+	    					<div class="smallHeader">Ваше имя<span class="red"><sup>*</sup></span></div>
+	    					<input type="text"  class="oderInput"/>
+	    					<div class="smallHeader">Телефон<span class="red"><sup>*</sup></span></div>
+	    					<input type="text"  class="oderInput telephone"/>
+	    					<div class="smallHeader">E-mail</div>
+	    					<input type="text"  class="oderInput"/>
+	    				</div>
+	    				<div class="centerOderColumn">
+	    					<div class="smallHeader">Упаковка</div>
+	    					<div class="inpForm">
+	    						<label class="radioLabel">
+			    					<input type="radio" name="choise" class="radioInput firstRadio" checked/>
+			                        1 тонна: без упаковки
+			                    </label><label class="rightLabel">6 320 р</label>
+	                        </div>
+	                        <div class="inpForm">
+	                        	<label class="radioLabel">
+			                        <input type="radio" name="choise" class="radioInput"/>
+			                        1 тонна: в бигбэгах
+			                    </label><label class="rightLabel">7 200 р</label>
+	                        </div>
+	                        <div class="inpForm">
+	                        	<label class="radioLabel">
+			                        <input type="radio" name="choise" class="radioInput"/>
+			                        25кг: в ведрах
+			                    </label><label class="rightLabel">305 р</label>
+	                        </div>
+	                        <div class="smallItalicText">Цены указаны без учета стоимости доставки. Самовывоз возможен с завода в г. Рязани.</div>
+	                        <div class="mediumHeader">Сумма</div>
+	    				</div>
+	    				<div class="rightOderColumn">
+	    					<div class="smallHeader">Количество<span class="red"><sup>*</sup></span></div>
+	    					<input type="text" class="oderInput telephone" /><span class="italic">ведер</span>
+	    					<div class="smallHeader">E-mail</div>
+	    					<textarea name="" id="" cols="30" rows="7" class="oderTextArea"></textarea>
+	    					<div class="sendButton"><img src="img/sendButton.png" alt=""/></div>
+	    				</div>
+	    			</form>
+	    		</div>
+	    	</div>
+	    	<div class="footer clearfix">
+	    		<div class="footerBorder"></div>
+	    		<div class="pageContainer">
+	    			<div class="leftOderColumn">
+	    				<div class="mediumHeader">Заказ по телефону</div>
+	    				<div class="telNumber">+7 495 775-83-34</div>
+	    			</div>
+	    			<div class="centerOderColumn">
+	    				<div class="mediumHeader">Заказ по e-mail</div>
+	    				<div class="footerEmail">
+	    					<a href="">info@asphalite.ru</a>
+	    				</div>
+	    				<div class="mediumHeader">Мы в социальных сетях</div>
+	    				<div class="socialNets clearfix">
+	    					<a class="socialItem facebook" href="#"></a>
+	    					<a class="socialItem twitter" href="#"></a>
+	    					<a class="socialItem lj" href="#"></a>
+	    				</div>
+	    			</div>
+	    			<div class="rightOderColumn">
+	    				<img src="img/pureProduct.png" alt="">
+	    				<div class="copyright">© 2008 - 2012 Группа предприятий &laquo;РАД&raquo;</div>
+	    				<div class="creator">
+	    					Все права защищены<br>
+	    					Создание сайта - <a href="http://greensight.ru">Greensight</a>
+	    				</div>
+	    			</div>
+
+	    		</div>
+	    	</div>
+    	</div>
+    </body>
+</html>

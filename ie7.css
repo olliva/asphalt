@@ -2,8 +2,8 @@
 	width: 170px;
 }
 .ticket{
-	width: 130px;
-	height: 108px;
+	width: 130px !important;
+	height: 108px !important;
 }
 .logoImage{
 	margin-top: 35px;
@@ -71,8 +71,10 @@ input#telI{
 }
 
 .document{
-	width: 169px;
-	height: 115px;
+	border: 1px solid #dfdfdf;
+}
+.documentBorderBottom{
+	display: none;
 }
 .documentsLine{
 	position: relative;
@@ -83,4 +85,44 @@ input#telI{
 }
 .rightAlgInstr{
 	top: -36px;
+}
+
+/*Comments Part*/
+.commentsPage .whiteTextarea{
+	width: 638px;
+}
+textarea#comFormText{
+	height: 228px;
+}
+.commentsPage .whiteInput {
+	width: 253px;
+}
+.commentContainer{
+	position: relative;
+	zoom: 1;
+}
+/*photo Page*/
+.photoPage .logoImage{
+    margin-top: 24px;
+}
+div.navigation {
+	width: 1040px !important;
+	margin-left: -50px !important;
+}
+ul.thumbs{
+	margin: 0 !important;
+}
+div.navigation div.top{
+	left:0 !important;
+}
+
+
+/*video Page*/
+.videosLine{
+	position: relative;
+	zoom: 1;
+}
+.mainVideo{
+	position: relative;
+	zoom: 1;
 }

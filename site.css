@@ -5,11 +5,11 @@
 }
 
 body{
-	margin: 0;
-	font-family: "Trebuchet MS", Tahoma, "verdana",  Helvetica, arial, sans-serif;
+    margin: 0;
+    font-family: "Trebuchet MS", Tahoma, "verdana",  Helvetica, arial, sans-serif;
 }
 ul{
-	margin:0;
+    margin:0;
     padding: 0;
 }
 a{
@@ -159,7 +159,7 @@ p,img{
 }
 .notMainPage .content{
     background: white;
-    height: 1405px;
+    padding-bottom: 50px;
 }
 .textContent{
     height: 635px;
@@ -591,6 +591,7 @@ height: 4px;
 position: absolute;
 bottom: 0;
 width: 100%;
+z-index: 1000;
 }
 
 .notMainPage .ticket .borderBottom{
@@ -960,21 +961,24 @@ ul.thumbs img.whiteLoop{
     left: 20px;
     width: 22px;
     height: 22px;
-    opacity: 0.35;
-    filter:alpha(opacity=35) progid:DXImageTransform.Microsoft.AlphaImageLoader(src=transparent.png, sizingMethod='crop');
+     box-shadow:none;
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
 }
 .previewImageContainer{
     position: relative;
-    
 }
-.videosLine{
-    margin-left: -50px;
-}
+
+/*videoPage*/
+
 .previewVideoContainer{
     float: left;
     width: 195px;
     margin-left: 50px;
     cursor: pointer;
+}
+.previewVideoContainer:first-child{
+    margin-left: 0;
 }
 .activePreview{
     background: #fae7b2;
@@ -998,6 +1002,7 @@ p.mainVideoName{
 .previewCont{
     position: relative;
 }
+.previewImageContainer img,
 .previewCont img{
     -webkit-box-shadow: 0px 2px 4px rgba(0,0,0,0.44);
     -moz-box-shadow: 0px 2px 4px rgba(0,0,0,0.44);
