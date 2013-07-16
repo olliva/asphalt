@@ -943,7 +943,7 @@ input#comPhone{
     line-height: 30px;
     margin-bottom: 30px;
 }
-.previewDescription{
+p.previewDescription{
     color: black;
     position: relative;
     z-index: 2000;
@@ -956,18 +956,63 @@ a:hover{
 }
 ul.thumbs img.whiteLoop{
     position: absolute;
-    top: 118px;
+    bottom: 10px;
     left: 20px;
     width: 22px;
     height: 22px;
     opacity: 0.35;
+    filter:alpha(opacity=35) progid:DXImageTransform.Microsoft.AlphaImageLoader(src=transparent.png, sizingMethod='crop');
+}
+.previewImageContainer{
+    position: relative;
+    
+}
+.videosLine{
+    margin-left: -50px;
+}
+.previewVideoContainer{
+    float: left;
+    width: 195px;
+    margin-left: 50px;
+    cursor: pointer;
+}
+.activePreview{
+    background: #fae7b2;
 }
 
-
-
-
-
-
+.video{
+    display: none;
+}
+.activeVideo{
+    display: block;
+}
+.mainVideo{
+    text-align: center;
+    margin-top: 55px;
+}
+p.mainVideoName{
+    font-size: 21px;
+    display: block;
+    padding-bottom: 20px;
+}
+.previewCont{
+    position: relative;
+}
+.previewCont img{
+    -webkit-box-shadow: 0px 2px 4px rgba(0,0,0,0.44);
+    -moz-box-shadow: 0px 2px 4px rgba(0,0,0,0.44);
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.44);
+}
+img.whitePlayButton{
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    left: 50%;
+    margin-left: -19px;
+    box-shadow:none;
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+}
 
 
 
